@@ -1,0 +1,61 @@
+name: 每週油價更新
+
+on:
+  schedule:
+    # 每週一 01:53（台北時間）= 週日 17:53 UTC；中油 0 時、台塑 1 時生效之後
+    - cron: '53 17 * * 0'
+  workflow_dispatch: {}   # 也可以在 Actions 頁面手動按「Run workflow」
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 抓取最新油價並併入資料
+        id: run
+        continue-on-error: true
+        run: python3 scripts/update_oil_prices.py data/oil_prices.csv
+
+      - name: 寫入執行摘要
+        if: always()
+        run: |
+          python3 - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          s = json.load(open('last_run.json', encoding='utf-8'))
+          print(f"## 油價更新 {s['run_at']}（台北時間）\n")
+          print(f"新增 {s['new_rows']} 筆，資料共 {s['total_rows']} 筆\n")
+          for k, t in (('added', '新增'), ('conflicts', '價格不一致，需核對'), ('failed', '連線失敗'), ('notes', '備註')):
+              if s[k]:
+                  print(f"### {t}")
+                  print('\n'.join('- ' + x for x in s[k]) + '\n')
+          print('### 目前價格')
+          for b, ps in s['latest'].items():
+              print(f"- {b}：" + '、'.join(f"{p} {v[0]}" for p, v in ps.items()))
+          PY
+
+      - name: 儲存更新後的資料
+        if: always()
+        run: |
+          git config user.name "oil-price-bot"
+          git config user.email "oil-price-bot@users.noreply.github.com"
+          git add data/oil_prices.csv
+          if git diff --cached --quiet; then
+            echo "價格沒有變動，不需儲存"
+          else
+            git commit -m "油價更新 $(TZ=Asia/Taipei date +%F)"
+            git push
+          fi
+
+      - name: 回報失敗
+        if: steps.run.outcome == 'failure'
+        run: |
+          echo "有資料來源連不上，請看上方摘要。"
+          exit 1
