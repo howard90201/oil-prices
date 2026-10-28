@@ -46,7 +46,8 @@ jobs:
         run: |
           git config user.name "oil-price-bot"
           git config user.email "oil-price-bot@users.noreply.github.com"
-          git add data/oil_prices.csv
+          cp last_run.json data/last_run.json
+          git add data/oil_prices.csv data/last_run.json
           if git diff --cached --quiet; then
             echo "價格沒有變動，不需儲存"
           else
