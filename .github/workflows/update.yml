@@ -2,8 +2,8 @@ name: 每週油價更新
 
 on:
   schedule:
-    # 每週一 01:53（台北時間）= 週日 17:53 UTC；中油 0 時、台塑 1 時生效之後
-    - cron: '53 17 * * 0'
+    # 每週一 02:00（台北時間）= 週日 18:00 UTC；中油 0 時、台塑 1 時生效之後
+    - cron: '0 18 * * 0'
   workflow_dispatch: {}   # 也可以在 Actions 頁面手動按「Run workflow」
 
 permissions:

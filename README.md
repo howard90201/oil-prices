@@ -12,7 +12,7 @@
 
 - `data/oil_prices.csv`：油價資料。欄位：品牌、油品、每公升價格、生效時間（台北時間）、與上次差額、來源、狀態。
 - `scripts/update_oil_prices.py`：更新程式。
-- `.github/workflows/update.yml`：自動執行設定，每週一 01:53（台北時間）。
+- `.github/workflows/update.yml`：自動執行設定，每週一 02:00（台北時間）。
 
 ## 查價規則
 
