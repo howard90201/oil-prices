@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""每日油價自動更新：把最新牌價併入 oil_prices_2010.csv。
+"""每日油價自動更新（好市多每次檢查都記一筆；中油、台塑照能源署每週牌價）：把最新牌價併入 oil_prices_2010.csv。
 
 資料來源（依序）：
   1. 經濟部能源署：中油＋台塑每週參考零售價（主要來源）
@@ -115,12 +115,16 @@ def merge(rows, candidates, source, summary):
 
 
 def costco_rows(rows, prices, source, summary, now):
-    cand = []
-    for prod, price in prices.items():
+    """好市多：每次檢查都寫一筆（價格沒變也寫，差額 0），這樣看得出哪天確認過。
+    同一天內重複執行：價格相同不再寫；價格不同才多寫一筆。"""
+    for prod, price in sorted(prices.items(), key=lambda kv: ORDER.index(kv[0]) if kv[0] in ORDER else 9):
         last = latest(rows, '好市多', prod)
-        if not last or abs(float(last[2]) - price) > 0.001:
-            cand.append(('好市多', prod, price, now))
-    merge(rows, cand, source, summary)
+        if last and last[3][:10] == now[:10] and abs(float(last[2]) - price) < 0.001:
+            continue
+        diff = round(price - float(last[2]), 1) if last else ''
+        status = '待確認' if diff != '' and abs(diff) >= BIG_JUMP else '已確認'
+        rows.append(['好市多', prod, price, now, diff, source, status])
+        summary['added'].append(f'好市多{prod} {now} {price}' + ('' if diff == '' or diff else '（價格沒變）'))
 
 
 def main(path, days=21):
