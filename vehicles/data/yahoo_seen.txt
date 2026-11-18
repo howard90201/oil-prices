@@ -1791,6 +1791,7 @@
 /new-bikes/trim/honda-cb300-2024-r-abs
 /new-bikes/trim/honda-cb300-2025-r-abs
 /new-bikes/trim/honda-cb300-2026-r-abs
+/new-bikes/trim/honda-cb400-2027-super-four-e-clutch-abs
 /new-bikes/trim/honda-cb650-2016-f
 /new-bikes/trim/honda-cb650-2017-f
 /new-bikes/trim/honda-cb650-2018-f-abs
@@ -1821,6 +1822,7 @@
 /new-bikes/trim/honda-cbr1000rr-2018-fireblade-sp-abs
 /new-bikes/trim/honda-cbr1000rr-2019-fireblade-abs
 /new-bikes/trim/honda-cbr1000rr-2019-fireblade-sp-abs
+/new-bikes/trim/honda-cbr400-2027-r-four-e-clutch-abs
 /new-bikes/trim/honda-cbr500-2016-r
 /new-bikes/trim/honda-cbr500-2017-r
 /new-bikes/trim/honda-cbr500-2018-r
@@ -6821,6 +6823,7 @@
 /new-cars/trim/bentley-flying-spur-2026-mulliner
 /new-cars/trim/bentley-flying-spur-2026-speed
 /new-cars/trim/bentley-flying-spur-2026-v8-hybrid
+/new-cars/trim/bentley-flying-spur-2027-v8-hybrid
 /new-cars/trim/bentley-mulsanne-2011-6-.-75-v8
 /new-cars/trim/bentley-mulsanne-2012-6-.-75-v8
 /new-cars/trim/bentley-mulsanne-2013-6-.-75-v8
@@ -10724,6 +10727,8 @@
 /new-cars/trim/kia-ev9-2025-gt-line-e-awd
 /new-cars/trim/kia-ev9-2026-earth-rwd
 /new-cars/trim/kia-ev9-2026-gt-line-e-awd
+/new-cars/trim/kia-ev9-2027-earth-rwd
+/new-cars/trim/kia-ev9-2027-gt-line-e-awd
 /new-cars/trim/kia-grand-carnival-2020-經典版ex
 /new-cars/trim/kia-grand-carnival-2020-豪華版sxl
 /new-cars/trim/kia-morning-2015-1-.-2時尚版
@@ -11306,10 +11311,8 @@
 /new-cars/trim/land-rover-range-rover-sport-2014-3-.-0-sdv6-hse
 /new-cars/trim/land-rover-range-rover-sport-2014-3-.-0-sdv6-se
 /new-cars/trim/land-rover-range-rover-sport-2014-3-.-0-v6-sc-hse-dynamic-
-/new-cars/trim/land-rover-range-rover-sport-2014-3-.-0-v6-sc-hse-dynamic-　
 /new-cars/trim/land-rover-range-rover-sport-2014-3-.-0-v6-sc-se
 /new-cars/trim/land-rover-range-rover-sport-2014-5-.-0-v8-sc-autobiography-dynamic-
-/new-cars/trim/land-rover-range-rover-sport-2014-5-.-0-v8-sc-autobiography-dynamic-　
 /new-cars/trim/land-rover-range-rover-sport-2015-3-.-0-sdv6-hse
 /new-cars/trim/land-rover-range-rover-sport-2015-3-.-0-sdv6-hybrid-hse
 /new-cars/trim/land-rover-range-rover-sport-2015-3-.-0-sdv6-se
@@ -11767,6 +11770,9 @@
 /new-cars/trim/lexus-lbx-2026-cool
 /new-cars/trim/lexus-lbx-2026-relax
 /new-cars/trim/lexus-lbx-2026-relax＋
+/new-cars/trim/lexus-lbx-2027-active
+/new-cars/trim/lexus-lbx-2027-cool
+/new-cars/trim/lexus-lbx-2027-relax
 /new-cars/trim/lexus-lc-2017-500
 /new-cars/trim/lexus-lc-2017-500h
 /new-cars/trim/lexus-lc-2018-500
@@ -12330,6 +12336,7 @@
 /new-cars/trim/lexus-ux-2025-300h豪華版
 /new-cars/trim/lexus-ux-2026-300h-f-sport-design
 /new-cars/trim/lexus-ux-2026-300h豪華版
+/new-cars/trim/lexus-ux-2027-300h-f-sport-design
 /new-cars/trim/lotus-elise-2010-sc
 /new-cars/trim/lotus-elise-2011-1-.-6-hardtop
 /new-cars/trim/lotus-elise-2011-sc
