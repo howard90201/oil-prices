@@ -47,8 +47,9 @@ def sitemap_trims():
             for blk in re.findall(r'<url>(.*?)</url>', x, re.S):
                 loc = re.search(r'<loc>([^<]+)</loc>', blk)
                 lm = re.search(r'<lastmod>([^<]+)</lastmod>', blk)
-                if loc and '/trim/' in loc.group(1):
-                    out[C.norm_path(loc.group(1))] = lm.group(1)[:10] if lm else ''
+                pth = C.norm_path(loc.group(1)) if loc else ''
+                if re.fullmatch(r'/new-(cars|bikes)/trim/[^/]+', pth):   # 不要 /photo、/video、/quotation 這些子頁
+                    out[pth] = lm.group(1)[:10] if lm else ''
     return out, len(maps)
 
 rows, cols = C.read_master()
@@ -84,7 +85,7 @@ def fetch(p):
         return p, (404 if k == 404 else None)
 T1 = time.time(); done_n = 0
 streak = 0
-with ThreadPoolExecutor(1) as ex:
+with ThreadPoolExecutor(3) as ex:
     for k0 in range(0, len(todo), 40):
         if streak >= 30:
             later = todo[k0:] + later; todo = todo[:k0]; log.append('Yahoo 連續 30 頁讀不到，先停，下個月再讀'); break
