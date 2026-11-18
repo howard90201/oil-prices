@@ -1790,6 +1790,7 @@
 /new-bikes/trim/honda-cb300-2024-r-abs
 /new-bikes/trim/honda-cb300-2025-r-abs
 /new-bikes/trim/honda-cb300-2026-r-abs
+/new-bikes/trim/honda-cb400-2027-super-four-e-clutch-abs
 /new-bikes/trim/honda-cb650-2016-f
 /new-bikes/trim/honda-cb650-2017-f
 /new-bikes/trim/honda-cb650-2018-f-abs
@@ -1820,6 +1821,7 @@
 /new-bikes/trim/honda-cbr1000rr-2018-fireblade-sp-abs
 /new-bikes/trim/honda-cbr1000rr-2019-fireblade-abs
 /new-bikes/trim/honda-cbr1000rr-2019-fireblade-sp-abs
+/new-bikes/trim/honda-cbr400-2027-r-four-e-clutch-abs
 /new-bikes/trim/honda-cbr500-2016-r
 /new-bikes/trim/honda-cbr500-2017-r
 /new-bikes/trim/honda-cbr500-2018-r
@@ -3573,6 +3575,7 @@
 /new-bikes/trim/pgo-ibubu-2016-125
 /new-bikes/trim/pgo-isavr-威力-2025-125-cbs
 /new-bikes/trim/pgo-isavr-威力-2026-125-cbs
+/new-bikes/trim/pgo-isavr-威力-2026-150-abs
 /new-bikes/trim/pgo-j-bubu-2014-115
 /new-bikes/trim/pgo-j-bubu-2014-115-abs
 /new-bikes/trim/pgo-j-bubu-2014-115-abs-dous
@@ -5403,6 +5406,7 @@
 /new-cars/trim/alfa-romeo-giulia-2025-intensa
 /new-cars/trim/alfa-romeo-giulia-2025-quadrifoglio
 /new-cars/trim/alfa-romeo-giulia-2025-sprint
+/new-cars/trim/alfa-romeo-giulia-2026-estrema
 /new-cars/trim/alfa-romeo-giulia-2026-intensa
 /new-cars/trim/alfa-romeo-giulia-2026-sprint
 /new-cars/trim/alfa-romeo-gt-2008-2-.-0-jts
@@ -5411,6 +5415,7 @@
 /new-cars/trim/alfa-romeo-spyder-2008-3-.-2-jts-q4
 /new-cars/trim/alfa-romeo-stelvio-2025-intensa
 /new-cars/trim/alfa-romeo-stelvio-2025-sprint
+/new-cars/trim/alfa-romeo-stelvio-2026-estrema
 /new-cars/trim/alfa-romeo-stelvio-2026-intensa
 /new-cars/trim/alfa-romeo-stelvio-2026-sprint
 /new-cars/trim/aston-martin-db11-2016-6-.-0-v12
@@ -5863,6 +5868,7 @@
 /new-cars/trim/audi-a5-avant-2025-tfsi-110kw-advanced進化版
 /new-cars/trim/audi-a5-avant-2025-tfsi-110kw-s-line運動版
 /new-cars/trim/audi-a5-avant-2025-tfsi-150kw-s-line運動版
+/new-cars/trim/audi-a5-avant-2026-rs5
 /new-cars/trim/audi-a5-avant-2026-s5
 /new-cars/trim/audi-a5-avant-2026-tfsi-110kw-advanced進化版
 /new-cars/trim/audi-a5-avant-2026-tfsi-110kw-s-line運動版
@@ -5927,6 +5933,7 @@
 /new-cars/trim/audi-a5-sedan-2025-tfsi-110kw-advanced進化版
 /new-cars/trim/audi-a5-sedan-2025-tfsi-110kw-s-line運動版
 /new-cars/trim/audi-a5-sedan-2025-tfsi-150kw-s-line運動版
+/new-cars/trim/audi-a5-sedan-2026-rs5
 /new-cars/trim/audi-a5-sedan-2026-s5
 /new-cars/trim/audi-a5-sedan-2026-tfsi-110kw-advanced進化版
 /new-cars/trim/audi-a5-sedan-2026-tfsi-110kw-s-line運動版
@@ -6820,6 +6827,7 @@
 /new-cars/trim/bentley-flying-spur-2026-mulliner
 /new-cars/trim/bentley-flying-spur-2026-speed
 /new-cars/trim/bentley-flying-spur-2026-v8-hybrid
+/new-cars/trim/bentley-flying-spur-2027-v8-hybrid
 /new-cars/trim/bentley-mulsanne-2011-6-.-75-v8
 /new-cars/trim/bentley-mulsanne-2012-6-.-75-v8
 /new-cars/trim/bentley-mulsanne-2013-6-.-75-v8
@@ -9351,6 +9359,7 @@
 /new-cars/trim/honda-civic-2024-e：hev
 /new-cars/trim/honda-civic-2025-e：hev
 /new-cars/trim/honda-civic-2026-e：hev
+/new-cars/trim/honda-civic-2027-e：hev
 /new-cars/trim/honda-civic-new-2014-1-.-8-vti
 /new-cars/trim/honda-civic-new-2014-1-.-8-vti-s
 /new-cars/trim/honda-civic-new-2014-2-.-0-s
@@ -10604,7 +10613,9 @@
 /new-cars/trim/jeep-grand-cherokee-2008-3-.-7
 /new-cars/trim/jeep-grand-cherokee-2009-3-.-7
 /new-cars/trim/jeep-wrangler-2026-rubicon
+/new-cars/trim/jeep-wrangler-2026-rubicon-85週年限量特仕版
 /new-cars/trim/jeep-wrangler-2026-sahara
+/new-cars/trim/jeep-wrangler-2026-sahara-whitecap限量特仕版
 /new-cars/trim/kia-carens-2015-crdi-柴油旗艦版
 /new-cars/trim/kia-carens-2015-crdi-柴油旗艦版-七人座客車
 /new-cars/trim/kia-carens-2015-crdi-柴油科技版
@@ -10682,6 +10693,11 @@
 /new-cars/trim/kia-carnival-2026-signature-7人座
 /new-cars/trim/kia-carnival-2026-signature-8人座
 /new-cars/trim/kia-carnival-2026-trendy-7人座
+/new-cars/trim/kia-carnival-2027-apex-7人座
+/new-cars/trim/kia-carnival-2027-apex-8人座
+/new-cars/trim/kia-carnival-2027-signature-7人座
+/new-cars/trim/kia-carnival-2027-signature-8人座
+/new-cars/trim/kia-carnival-2027-trendy-7人座
 /new-cars/trim/kia-ceed-sportswagon-2021-european-edition首批歐洲限量版
 /new-cars/trim/kia-ceed-sportswagon-2023-mhev
 /new-cars/trim/kia-ceed-sportswagon-2024-apex-mild-hybrid
@@ -10717,12 +10733,17 @@
 /new-cars/trim/kia-ev6-2026-air增程版
 /new-cars/trim/kia-ev6-2026-gt-line增程版
 /new-cars/trim/kia-ev6-2026-light標準版
+/new-cars/trim/kia-ev6-2027-air增程版
+/new-cars/trim/kia-ev6-2027-gt-line增程版
+/new-cars/trim/kia-ev6-2027-light標準版
 /new-cars/trim/kia-ev9-2024-earth-rwd
 /new-cars/trim/kia-ev9-2024-gt-line-e-awd
 /new-cars/trim/kia-ev9-2025-earth-rwd
 /new-cars/trim/kia-ev9-2025-gt-line-e-awd
 /new-cars/trim/kia-ev9-2026-earth-rwd
 /new-cars/trim/kia-ev9-2026-gt-line-e-awd
+/new-cars/trim/kia-ev9-2027-earth-rwd
+/new-cars/trim/kia-ev9-2027-gt-line-e-awd
 /new-cars/trim/kia-grand-carnival-2020-經典版ex
 /new-cars/trim/kia-grand-carnival-2020-豪華版sxl
 /new-cars/trim/kia-morning-2015-1-.-2時尚版
@@ -11556,6 +11577,10 @@
 /new-cars/trim/lexus-es-2026-300h-f-sport
 /new-cars/trim/lexus-es-2026-300h旗艦版
 /new-cars/trim/lexus-es-2026-300h豪華版
+/new-cars/trim/lexus-es-2027-300h豪華版
+/new-cars/trim/lexus-es-2027-300h頂級版
+/new-cars/trim/lexus-es-2027-500e旗艦版
+/new-cars/trim/lexus-es-2027-500e頂級版
 /new-cars/trim/lexus-gs-2008-350
 /new-cars/trim/lexus-gs-2008-450h
 /new-cars/trim/lexus-gs-2008-460
@@ -11744,6 +11769,9 @@
 /new-cars/trim/lexus-is-2026-300h-f-sport版
 /new-cars/trim/lexus-is-2026-300h旗艦版
 /new-cars/trim/lexus-is-2026-300h豪華版
+/new-cars/trim/lexus-is-2027-300h-f-sport版
+/new-cars/trim/lexus-is-2027-300h旗艦版
+/new-cars/trim/lexus-is-2027-300h豪華版
 /new-cars/trim/lexus-isc-2009-navi版
 /new-cars/trim/lexus-isc-2009-sporty版
 /new-cars/trim/lexus-isc-2010-250-勁馳sporty版
@@ -11764,6 +11792,11 @@
 /new-cars/trim/lexus-lbx-2026-cool
 /new-cars/trim/lexus-lbx-2026-relax
 /new-cars/trim/lexus-lbx-2026-relax＋
+/new-cars/trim/lexus-lbx-2027-active
+/new-cars/trim/lexus-lbx-2027-active＋
+/new-cars/trim/lexus-lbx-2027-cool
+/new-cars/trim/lexus-lbx-2027-relax
+/new-cars/trim/lexus-lbx-2027-relax＋
 /new-cars/trim/lexus-lc-2017-500
 /new-cars/trim/lexus-lc-2017-500h
 /new-cars/trim/lexus-lc-2018-500
@@ -11921,6 +11954,10 @@
 /new-cars/trim/lexus-ls-2026-500h旗艦版
 /new-cars/trim/lexus-ls-2026-500h旗艦版(kiriko飾板)
 /new-cars/trim/lexus-ls-2026-500h頂級版
+/new-cars/trim/lexus-ls-2027-500h-f-sport版
+/new-cars/trim/lexus-ls-2027-500h旗艦版
+/new-cars/trim/lexus-ls-2027-500h旗艦版(kiriko飾板)
+/new-cars/trim/lexus-ls-2027-500h頂級版
 /new-cars/trim/lexus-lx-2008-570
 /new-cars/trim/lexus-lx-2009-570
 /new-cars/trim/lexus-lx-2010-570
@@ -12289,6 +12326,16 @@
 /new-cars/trim/lexus-rx-2026-450h＋旗艦版
 /new-cars/trim/lexus-rx-2026-450h＋豪華版
 /new-cars/trim/lexus-rx-2026-500h-f-sport-performance
+/new-cars/trim/lexus-rx-2027-350-f-sport版
+/new-cars/trim/lexus-rx-2027-350h旗艦版
+/new-cars/trim/lexus-rx-2027-350h豪華版
+/new-cars/trim/lexus-rx-2027-350h頂級版
+/new-cars/trim/lexus-rx-2027-350旗艦版
+/new-cars/trim/lexus-rx-2027-350豪華版
+/new-cars/trim/lexus-rx-2027-350頂級版
+/new-cars/trim/lexus-rx-2027-450h＋旗艦版
+/new-cars/trim/lexus-rx-2027-450h＋豪華版
+/new-cars/trim/lexus-rx-2027-500h-f-sport-performance
 /new-cars/trim/lexus-rz-2023-450e
 /new-cars/trim/lexus-rz-2025-450e旗艦版
 /new-cars/trim/lexus-rz-2026-500e旗艦版
@@ -12327,6 +12374,8 @@
 /new-cars/trim/lexus-ux-2025-300h豪華版
 /new-cars/trim/lexus-ux-2026-300h-f-sport-design
 /new-cars/trim/lexus-ux-2026-300h豪華版
+/new-cars/trim/lexus-ux-2027-300h-f-sport-design
+/new-cars/trim/lexus-ux-2027-300h豪華版
 /new-cars/trim/lotus-elise-2010-sc
 /new-cars/trim/lotus-elise-2011-1-.-6-hardtop
 /new-cars/trim/lotus-elise-2011-sc
@@ -18662,6 +18711,7 @@
 /new-cars/trim/skoda-superb-combi-2026-2.0-tsi-sportline
 /new-cars/trim/skoda-superb-combi-2026-2.0-tsi-sportplus-4x4
 /new-cars/trim/skoda-superb-sedan(new)-2025-1.5-tsi-e-tec
+/new-cars/trim/skoda-superb-sedan(new)-2025-2.0-tsi-4x4-l&amp;k
 /new-cars/trim/skoda-superb-sedan(new)-2025-2.0-tsi-4x4-l&k
 /new-cars/trim/skoda-superb-sedan(new)-2025-2.0-tsi-sportline
 /new-cars/trim/skoda-superb-sedan-2011-1-.-8-tsi
@@ -18711,6 +18761,7 @@
 /new-cars/trim/skoda-superb-sedan-2024-2.0-tsi-l&k尊榮動力版
 /new-cars/trim/skoda-superb-sedan-2024-2.0-tsi-sportline
 /new-cars/trim/skoda-superb-sedan-2026-1.5-tsi-e-tec
+/new-cars/trim/skoda-superb-sedan-2026-2.0-tsi-4x4-l&amp;k
 /new-cars/trim/skoda-superb-sedan-2026-2.0-tsi-4x4-l&k
 /new-cars/trim/skoda-superb-sedan-2026-2.0-tsi-sportline
 /new-cars/trim/skoda-yeti-2010-1-.-2-tsi
