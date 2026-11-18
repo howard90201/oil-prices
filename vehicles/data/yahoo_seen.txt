@@ -1791,6 +1791,7 @@
 /new-bikes/trim/honda-cb300-2024-r-abs
 /new-bikes/trim/honda-cb300-2025-r-abs
 /new-bikes/trim/honda-cb300-2026-r-abs
+/new-bikes/trim/honda-cb400-2027-super-four-e-clutch-abs
 /new-bikes/trim/honda-cb650-2016-f
 /new-bikes/trim/honda-cb650-2017-f
 /new-bikes/trim/honda-cb650-2018-f-abs
@@ -1821,6 +1822,7 @@
 /new-bikes/trim/honda-cbr1000rr-2018-fireblade-sp-abs
 /new-bikes/trim/honda-cbr1000rr-2019-fireblade-abs
 /new-bikes/trim/honda-cbr1000rr-2019-fireblade-sp-abs
+/new-bikes/trim/honda-cbr400-2027-r-four-e-clutch-abs
 /new-bikes/trim/honda-cbr500-2016-r
 /new-bikes/trim/honda-cbr500-2017-r
 /new-bikes/trim/honda-cbr500-2018-r
@@ -6821,6 +6823,7 @@
 /new-cars/trim/bentley-flying-spur-2026-mulliner
 /new-cars/trim/bentley-flying-spur-2026-speed
 /new-cars/trim/bentley-flying-spur-2026-v8-hybrid
+/new-cars/trim/bentley-flying-spur-2027-v8-hybrid
 /new-cars/trim/bentley-mulsanne-2011-6-.-75-v8
 /new-cars/trim/bentley-mulsanne-2012-6-.-75-v8
 /new-cars/trim/bentley-mulsanne-2013-6-.-75-v8
