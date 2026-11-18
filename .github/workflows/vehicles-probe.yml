@@ -1,0 +1,13 @@
+name: 車型資料連線測試
+on:
+  workflow_dispatch: {}
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 vehicles/scripts/probe.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: probe
+          path: probe/
