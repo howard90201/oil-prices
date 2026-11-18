@@ -18711,7 +18711,6 @@
 /new-cars/trim/skoda-superb-combi-2026-2.0-tsi-sportline
 /new-cars/trim/skoda-superb-combi-2026-2.0-tsi-sportplus-4x4
 /new-cars/trim/skoda-superb-sedan(new)-2025-1.5-tsi-e-tec
-/new-cars/trim/skoda-superb-sedan(new)-2025-2.0-tsi-4x4-l&amp;k
 /new-cars/trim/skoda-superb-sedan(new)-2025-2.0-tsi-4x4-l&k
 /new-cars/trim/skoda-superb-sedan(new)-2025-2.0-tsi-sportline
 /new-cars/trim/skoda-superb-sedan-2011-1-.-8-tsi
@@ -18761,7 +18760,6 @@
 /new-cars/trim/skoda-superb-sedan-2024-2.0-tsi-l&k尊榮動力版
 /new-cars/trim/skoda-superb-sedan-2024-2.0-tsi-sportline
 /new-cars/trim/skoda-superb-sedan-2026-1.5-tsi-e-tec
-/new-cars/trim/skoda-superb-sedan-2026-2.0-tsi-4x4-l&amp;k
 /new-cars/trim/skoda-superb-sedan-2026-2.0-tsi-4x4-l&k
 /new-cars/trim/skoda-superb-sedan-2026-2.0-tsi-sportline
 /new-cars/trim/skoda-yeti-2010-1-.-2-tsi

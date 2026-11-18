@@ -5,6 +5,7 @@
 輸出：vehicles/pending/<日期>.csv、vehicles/pending/<日期>.md、vehicles/pending/latest.json（給 Actions 開 issue 用）
 """
 from urllib.parse import quote
+import html
 import csv, json, os, re, sys, time, datetime, urllib.request, gzip
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -47,7 +48,7 @@ def sitemap_trims():
             for blk in re.findall(r'<url>(.*?)</url>', x, re.S):
                 loc = re.search(r'<loc>([^<]+)</loc>', blk)
                 lm = re.search(r'<lastmod>([^<]+)</lastmod>', blk)
-                pth = C.norm_path(loc.group(1)) if loc else ''
+                pth = C.norm_path(html.unescape(loc.group(1))) if loc else ''
                 if re.fullmatch(r'/new-(cars|bikes)/trim/[^/]+', pth):   # 不要 /photo、/video、/quotation 這些子頁
                     out[pth] = lm.group(1)[:10] if lm else ''
     return out, len(maps)
