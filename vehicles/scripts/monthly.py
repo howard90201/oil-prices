@@ -58,6 +58,8 @@ new = [p for p in trims if p not in seen]
 def year_of(p):
     m = C.split_path(p); return int(m.group(3)) if m else 0
 new.sort(key=lambda p: (-year_of(p), p))       # 新年式先讀
+old = [p for p in new if year_of(p) < today.year - 1]   # 舊年式頁：主檔建立時已用其他方式涵蓋，每月不讀
+new = [p for p in new if year_of(p) >= today.year - 1]
 todo, later = new[:LIMIT], new[LIMIT:]
 
 # 2. 讀新車款頁並分類
@@ -67,20 +69,30 @@ for r in rows:
 models = {(r['vehicle_type'], r['brand'], r['model_family'].upper()) for r in rows}
 brands = {(r['vehicle_type'], r['brand']) for r in rows}
 pending, failed = [], []
+ERR = {}
 def fetch(p):
     try:
-        return p, get('https://autos.yahoo.com.tw' + p + '/spec')
-    except Exception:
+        h = get('https://autos.yahoo.com.tw' + p + '/spec', tries=1)
+        time.sleep(1.5)
+        return p, h
+    except Exception as e:
+        k = getattr(e, 'code', None) or type(e).__name__
+        ERR[k] = ERR.get(k, 0) + 1
+        time.sleep(5)
         return p, None
 T1 = time.time(); done_n = 0
-with ThreadPoolExecutor(4) as ex:
+streak = 0
+with ThreadPoolExecutor(1) as ex:
     for k0 in range(0, len(todo), 40):
+        if streak >= 30:
+            later = todo[k0:] + later; todo = todo[:k0]; log.append('Yahoo 連續 30 頁讀不到，先停，下個月再讀'); break
         if time.time() - T0 > BUDGET:
             later = todo[k0:] + later; todo = todo[:k0]; log.append('時間到，剩下的下個月再讀'); break
         for p, h in ex.map(fetch, todo[k0:k0 + 40]):
             done_n += 1
             if h is None:
-                failed.append(p); continue
+                failed.append(p); streak += 1; continue
+            streak = 0
             title, spec = C.parse_spec_page(h)
             r, issues = C.page_to_row(p, title, spec)
             seen.add(p)
@@ -164,10 +176,12 @@ if flag:
 adds = [p for p in pending if p['action'] == '新增' and p not in flag]
 if adds:
     md += ['## 新增車款', ''] + [f"- {p['display_name']} {p['year_from']}（{p['fuel_type']}，{p['horsepower_ps'] or '—'} 匹）" for p in adds[:80]] + ([f'- …另有 {len(adds) - 80} 筆'] if len(adds) > 80 else []) + ['']
+if ERR:
+    log.append('讀取失敗原因：' + '、'.join(f'{k} {v} 頁' for k, v in ERR.items()))
 if log:
     md += ['## 連線問題', ''] + ['- ' + x for x in log] + ['']
 md += ['完整清單：`vehicles/pending/' + stamp + '.csv`。確認後在這個 issue 加上「同意套用」標籤，或回覆 Claude，就會套用到主檔和車帳本的車款資料。']
 open(os.path.join(PEND, f'{stamp}.md'), 'w', encoding='utf-8').write('\n'.join(md) + '\n')
-json.dump(dict(date=stamp, sitemap_trims=len(trims), new_total=len(new), read=done_n, t_sitemap=T_MAP, t_pages=T_PAGES, counts=cnt, flagged=len(flag), gov=len(gov), later=len(later), failed=len(failed), log=log),
+json.dump(dict(date=stamp, sitemap_trims=len(trims), new_total=len(new), read=done_n, t_sitemap=T_MAP, t_pages=T_PAGES, counts=cnt, flagged=len(flag), gov=len(gov), later=len(later), failed=len(failed), old_unread=len(old), errors={str(k): v for k, v in ERR.items()}, log=log),
           open(os.path.join(PEND, 'latest.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 print('\n'.join(md))
