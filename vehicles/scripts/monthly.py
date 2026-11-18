@@ -4,6 +4,7 @@
 用法：python3 vehicles/scripts/monthly.py [最多讀幾頁，預設 600]
 輸出：vehicles/pending/<日期>.csv、vehicles/pending/<日期>.md、vehicles/pending/latest.json（給 Actions 開 issue 用）
 """
+from urllib.parse import quote
 import csv, json, os, re, sys, time, datetime, urllib.request, gzip
 from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -68,18 +69,19 @@ for r in rows:
     by_key.setdefault((r['vehicle_type'], r['brand'], r['model_family'].upper(), r['trim'].upper()), []).append(r)
 models = {(r['vehicle_type'], r['brand'], r['model_family'].upper()) for r in rows}
 brands = {(r['vehicle_type'], r['brand']) for r in rows}
-pending, failed = [], []
-ERR = {}
+pending, failed, gone = [], [], []
+ERR = {}; ERR_SAMPLE = []
 def fetch(p):
     try:
-        h = get('https://autos.yahoo.com.tw' + p + '/spec', tries=1)
+        h = get('https://autos.yahoo.com.tw' + quote(p) + '/spec', tries=1)
         time.sleep(1.5)
         return p, h
     except Exception as e:
         k = getattr(e, 'code', None) or type(e).__name__
         ERR[k] = ERR.get(k, 0) + 1
-        time.sleep(5)
-        return p, None
+        if len(ERR_SAMPLE) < 15: ERR_SAMPLE.append(f'{k} {p}')
+        time.sleep(1.5 if k == 404 else 5)
+        return p, (404 if k == 404 else None)
 T1 = time.time(); done_n = 0
 streak = 0
 with ThreadPoolExecutor(1) as ex:
@@ -90,6 +92,8 @@ with ThreadPoolExecutor(1) as ex:
             later = todo[k0:] + later; todo = todo[:k0]; log.append('時間到，剩下的下個月再讀'); break
         for p, h in ex.map(fetch, todo[k0:k0 + 40]):
             done_n += 1
+            if h == 404:                                   # 網站地圖有、頁面已下架：記為讀過
+                seen.add(p); gone.append(p); continue
             if h is None:
                 failed.append(p); streak += 1; continue
             streak = 0
@@ -182,6 +186,6 @@ if log:
     md += ['## 連線問題', ''] + ['- ' + x for x in log] + ['']
 md += ['完整清單：`vehicles/pending/' + stamp + '.csv`。確認後在這個 issue 加上「同意套用」標籤，或回覆 Claude，就會套用到主檔和車帳本的車款資料。']
 open(os.path.join(PEND, f'{stamp}.md'), 'w', encoding='utf-8').write('\n'.join(md) + '\n')
-json.dump(dict(date=stamp, sitemap_trims=len(trims), new_total=len(new), read=done_n, t_sitemap=T_MAP, t_pages=T_PAGES, counts=cnt, flagged=len(flag), gov=len(gov), later=len(later), failed=len(failed), old_unread=len(old), errors={str(k): v for k, v in ERR.items()}, log=log),
+json.dump(dict(date=stamp, sitemap_trims=len(trims), new_total=len(new), read=done_n, t_sitemap=T_MAP, t_pages=T_PAGES, counts=cnt, flagged=len(flag), gov=len(gov), later=len(later), failed=len(failed), old_unread=len(old), gone=len(gone), err_sample=ERR_SAMPLE, errors={str(k): v for k, v in ERR.items()}, log=log),
           open(os.path.join(PEND, 'latest.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 print('\n'.join(md))
