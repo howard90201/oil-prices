@@ -1,0 +1,52 @@
+{
+ "yahoo_robots": {
+  "status": 200,
+  "bytes": 72,
+  "final_url": "https://autos.yahoo.com.tw/robots.txt"
+ },
+ "yahoo_home": {
+  "status": 200,
+  "bytes": 142651,
+  "final_url": "https://autos.yahoo.com.tw/new-cars"
+ },
+ "yahoo_sitemap": {
+  "status": 200,
+  "bytes": 49103,
+  "final_url": "https://autos.yahoo.com.tw/sitemap.xml"
+ },
+ "yahoo_trim": {
+  "status": 200,
+  "bytes": 100832,
+  "final_url": "https://autos.yahoo.com.tw/new-cars/trim/toyota-crown-sport-2027-hev/spec"
+ },
+ "yahoo_make": {
+  "status": 200,
+  "bytes": 87576,
+  "final_url": "https://autos.yahoo.com.tw/new-cars/make/toyota"
+ },
+ "yahoo_bikes": {
+  "status": 200,
+  "bytes": 144696,
+  "final_url": "https://autos.yahoo.com.tw/new-bikes"
+ },
+ "gov_6032": {
+  "status": 200,
+  "bytes": 3144,
+  "final_url": "https://data.gov.tw/api/v2/rest/dataset/6032"
+ },
+ "gov_34934": {
+  "status": 200,
+  "bytes": 7483,
+  "final_url": "https://data.gov.tw/api/v2/rest/dataset/34934"
+ },
+ "moenv_swagger": {
+  "status": 200,
+  "bytes": 6219,
+  "final_url": "https://data.moenv.gov.tw/swagger/"
+ },
+ "moenv_nos20": {
+  "status": 200,
+  "bytes": 20,
+  "final_url": "https://data.moenv.gov.tw/api/v2/nos_p_20?format=json&limit=3"
+ }
+}

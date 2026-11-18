@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>開放資料API | 環境部環境資料開放平台</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.29.1/swagger-ui.css" integrity="sha512-eZpfl9qlKnbDvlJ2brfdx3nhlP1FMsA23w65motxKdYsUcfMcdO2bcLPr7mXhvyzmDZwuzYCJKrl/sEo1ditVQ==" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/swagger/fonts.css">
+  <link rel="icon" type="image/png" href="/swagger/favicon.png" sizes="32x32" />
+  <meta name="robots" content="noindex">
+  <style>
+    html {
+      box-sizing: border-box;
+      overflow: -moz-scrollbars-vertical;
+      overflow-y: scroll;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    a:focus,
+    button:focus,
+    input:focus{
+      outline: 3px solid #1CB6B8;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+    }
+
+    .download-url-wrapper input:focus {
+      box-shadow: 0 0 1px 3px black inset !important;
+    }
+
+    .download-url-wrapper button:focus {
+      box-shadow: 0 0 1px 3px black inset !important;
+    }
+
+    .swagger-ui .opblock .opblock-summary-method{
+      color: #202020;
+    }
+
+    .swagger-ui.swagger-container .topbar-wrapper a span{
+      color: #424242;
+    }
+
+    span.url{
+      color: #3b75b8;
+    }
+
+    .swagger-ui .info .title small {
+      background-color: #eaecf1 !important;
+    }
+
+    .swagger-ui .info .title small pre {
+      color: #242424 !important;
+    }
+
+    .jump-to-content {
+      color: transparent;
+    }
+
+    .jump-to-content:focus {
+      color: #000;
+    }
+
+    .fl-r {
+      float: right;
+    }
+
+    header .header-header {
+      background-color: #18233F;
+      padding: 0.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    header .header-header #ak-jump {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      font-size: 0.875rem;
+      color: #18233F;
+    }
+    header .header-header #ak-jump:focus {
+      color: #fff;
+    }
+    header .header-container {
+      background-color: #18233F;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1rem;
+      margin: 0;
+    }
+    header a {
+      color: white;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .topbar{
+      display: none;
+    }
+    .replace {
+      font-size: 14px;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      margin: 0;
+      font-family: Titillium Web,sans-serif;
+      color: #3b4151;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+
+<noscript>Your browser does not support JavaScript! 您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態。</noscript>
+<header>
+  <div class="header-header">
+    <a href="#swagger-ui" title="跳至主要內容" id="ak-jump">跳至主要內容</a>
+  </div>
+  <div class="header-container">
+    <div class="header-logo">
+      <h1>
+        <a href="/" title="回環境部環境資料開放平台首頁">
+          <img src="/swagger/epa-logo.svg" alt="環境部環境資料開放平台Logo">
+        </a>
+      </h1>
+    </div>
+    <div class="fl-r">
+      <a href="/swagger/en/" title="Go to Ministry of Environment OpenData API Documentation">English</a>
+      <a href="/swagger/" title="前往環境部環境資料開放平台開放資料 API">中文</a>
+    </div>
+  </div>
+</header>
+<div id="swagger-ui"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.29.1/swagger-ui-bundle.js" integrity="sha512-iDdi6WwSTimAFh1NhPyFZpHJWr16m/PupHztElqQL+gQoQDavUATsP9hcvgs9Yci+EUA//WvZYZsCTDhRDKc3g==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.29.1/swagger-ui-standalone-preset.js" integrity="sha512-oGq+mP+3XUyYDm9vsprsd6YdhOokdkcLNUZnmEE6HJzG0F9fIaB8kgGZsjdfTWN8w/1f2kN4a/0xkla0hsetcQ==" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+
+<script src="/swagger/accessibility.js"></script>
+<script>
+    window.onload = function () {
+        SwaggerAccessibility.init(document.getElementById('swagger-ui'));
+        // 初始化 Swagger UI
+        const ui = SwaggerUIBundle({
+            url: '/swagger/openapi.yaml',
+            dom_id: '#swagger-ui',
+            deepLinking: true,
+            queryConfigEnabled: false,
+            validatorUrl: null,
+            presets: [
+                SwaggerUIBundle.presets.apis,
+                SwaggerUIStandalonePreset
+            ],
+            plugins: [
+                SwaggerUIBundle.plugins.DownloadUrl
+            ],
+            layout: "StandaloneLayout"
+        })
+
+        window.ui = ui
+        // 將 Swagger 資訊標題改為頁面主標題
+        // $('#swagger-ui > section > div.swagger-ui > div > div.information-container.wrapper > section > div > hgroup > h2').replaceWith(function () {
+        //     return "<h1>" + $(this).html() + "</h1>";
+        // });
+
+        $('.download-url-input').attr('id', 'swagger-input')
+        $('.download-url-wrapper').append('<label class="swagger-input-label" for="swagger-input">OpenAPI 規格檔網址</label>')
+
+
+        setTimeout(function() {
+            // 為符合無障礙規範，將 h4 標題改為 h3 標題
+            $('#swagger-ui h4').replaceWith(function(){
+                return $("<h3>", {
+                    'id': $(this).attr('id'),
+                    "class": $(this).attr('class'),
+                    html: $(this).html()
+                })
+            });
+
+            $('.information-container.wrapper a').attr('title', '另開新視窗')
+            $('.information-container.wrapper a').remove()
+
+
+            $('.topbar').remove()
+            $('.expand-operation').attr('aria-label', '向下展開')
+            $('.expand-operation svg').attr('title', '向下展開')
+            $('.expand-operation').remove() // 標籤無意義  移除
+
+        }, 2000)
+    }
+</script>
+</body>
+
+</html>

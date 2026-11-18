@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+      <title>Toyota 豐田 | 車系總覽 - Yahoo汽車機車</title>
+<meta property="og:title" content="Toyota 豐田 | 車系總覽 - Yahoo汽車機車">
+
+<meta name="description" content="在Yahoo汽車機車，查詢 Toyota 豐田 歷年完整車系及車款、最新售價、規格、配備、內外裝照片與中古行情，瀏覽品牌影音與品牌新聞、推薦試駕，讓愛車的你一手掌握流行資訊！">
+<meta property="og:description" content="在Yahoo汽車機車，查詢 Toyota 豐田 歷年完整車系及車款、最新售價、規格、配備、內外裝照片與中古行情，瀏覽品牌影音與品牌新聞、推薦試駕，讓愛車的你一手掌握流行資訊！">
+
+<link rel="alternate" type="application/rss+xml" href="https://autos.yahoo.com.tw/rss/cars" title="RSS Feed">
+
+
+
+  <meta property="og:url" content="http://autos.yahoo.com.tw/new-cars/make/toyota">
+
+  <meta property="og:image" content="https://autos.yahoo.com.tw/images/ogimage.jpg?id=d09de866f56d21f327f3f0e4f8738ad5">
+
+
+<meta name="at-token" content="e1eba75272ae3ea4fa9e80459949feda4e63133a">
+    <link rel="stylesheet" href="/css/app.css?id=4aba4c457bba5ece95403522409f2613">
+    <link rel="icon" href="/favicon.ico?v=2" />
+    <link rel="preload" href="https://s.yimg.com/ss/rapid3.js" as="script">
+    <link rel="preload" href="https://s.yimg.com/ss/rapidworker-1.2.js" as="script">
+    <link rel="preload" href="https://s.yimg.com/oa/consent.js" as="script">
+
+            <script type="text/javascript" src="https://s.yimg.com/aaq/benji/benji-2.3.270.js" ></script>    
+    <script src="https://s.yimg.com/ss/analytics3.js"></script>
+    <meta name="oath:guce:consent-host" content="guce.yahoo.com.tw"/>
+
+<!-- Consent Manager Tag : Script -->
+<script type="text/javascript" src="https://consent.cmp.oath.com/cmp.js"></script>
+<script type="text/javascript" src="https://s.yimg.com/nb/AdLib/adlib-prod.umd.min.js"></script>
+
+<!-- Consent Manager Tag : Stubbed (updated 2018-04-27T17:00) -->
+<script type="text/javascript">
+    (function () {
+        var gdprAppliesGlobally = false;
+
+        function addFrame() {
+            if (!window.frames['__cmpLocator']) {
+                if (document.body && document.body.firstChild) {
+                    var body = document.body,
+                        iframe = document.createElement('iframe');
+
+                      iframe.style.display = 'none';
+                	  iframe.height = iframe.width = 0;
+
+                    iframe.name = '__cmpLocator';
+                    body.insertBefore(iframe, body.firstChild);
+                } else {
+                    setTimeout(addFrame, 5);
+                }
+            }
+        }
+
+        addFrame();
+
+        function stubCMP() {
+            var b = arguments;
+            __cmp.a = __cmp.a || [];
+
+            if (!b.length) return __cmp.a;
+            else if (b[0] === 'ping') {
+                b[2]({
+                    "gdprAppliesGlobally": gdprAppliesGlobally,
+                    "cmpLoaded": false
+                }, true);
+            }
+            else {
+                __cmp.a.push([].slice.apply(b));
+            }
+        }
+
+        function cmpMsgHandler(event) {
+            var msgIsString = typeof event.data === "string";
+            var json = event.data;
+            if (msgIsString) {
+                try {
+                    json = JSON.parse(event.data);
+                } catch (e) {}
+            }
+            if (json.__cmpCall) {
+                var i = json.__cmpCall;
+                window.__cmp(i.command, i.parameter, function (retValue, success) {
+                    var returnMsg = {
+                        "__cmpReturn": {
+                            "returnValue": retValue,
+                            "success": success,
+                            "callId": i.callId
+                        }
+                    };
+                    event.source.postMessage(msgIsString ?
+                        JSON.stringify(returnMsg) : returnMsg, '*');
+                });
+            }
+        }
+
+        if (typeof (__cmp) !== 'function') {
+            window.__cmp = stubCMP;
+            __cmp.msgHandler = cmpMsgHandler;
+            if (window.addEventListener)
+                window.addEventListener('message', cmpMsgHandler, false);
+            else window.attachEvent('onmessage', cmpMsgHandler);
+        }
+    })();
+
+</script>
+<!-- End Consent Manager Tag : Stubbed -->
+
+
+<script type="text/javascript">
+    window.__cmp('init');
+</script>
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=DC-16511126"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function dv_gtag(){dataLayer.push(arguments);}
+  dv_gtag('js', new Date());
+
+  dv_gtag('config', 'DC-16511126');
+</script>
+
+<!-- Taboola Pixel Code -->
+<script type='text/javascript'>
+  window._tfa = window._tfa || [];
+  window._tfa.push({notify: 'event', name: 'page_view', id: 1706694});
+  !function (t, f, a, x) {
+         if (!document.getElementById(x)) {
+            t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
+         }
+  }(document.createElement('script'),
+  document.getElementsByTagName('script')[0],
+  '//cdn.taboola.com/libtrc/unip/1706694/tfa.js',
+  'tb_tfa_script');
+</script>
+<!-- End of Taboola Pixel Code -->
+
+    
+    </head>
+
+<body>
+    <script src='https://s.yimg.com/ss/rapid3.js'></script>
+    <script src='https://s.yimg.com/ss/rapidworker-1.2.js'></script>
+    <script src="https://s.yimg.com/oa/consent.js "></script>
+    <script>
+
+        function rapids() {
+            var keys = {
+                pt: "utility"
+            };
+            
+                            keys.pstcat = "汽車館_Toyota 豐田_車系列表";
+            
+            
+            
+            console.log('key?', keys);
+
+            var space_id = "794027974";
+            var event_params = {
+                yMarket: "tw",
+                yLocale: "zh-tw"
+            };    
+                            event_params.yRID = "4tlhkollfqjq3";
+                        var conf = {
+                spaceid: space_id,
+                tag_id: "G-R03XFJ4HBB",
+                pageview_on_init: true,
+                client_only: 1,
+                keys: keys,
+                event_params: event_params
+            };
+            var ins = new YAHOO.i13n.Rapid(conf);
+            ins.init();
+        };
+        rapids();
+    </script>
+
+    <script>
+        window.__adlib.fireComscoreBeacon({
+            c1: "2",
+            c2: "7241469",
+            c5: "794027974",
+            c7: "https%3A%2F%2Fautos.yahoo.com.tw%2Fnew-cars%2Fmake%2Ftoyota"
+        });
+    </script>
+    <noscript>
+        <img
+            src="https://sb.scorecardresearch.com/p?c1=2&c2=7241469&c7=https%3A%2F%2Fautos.yahoo.com.tw%2Fnew-cars%2Fmake%2Ftoyota&c5=794027974&cv=2.0&cj=1" />
+    </noscript>
+
+    <span id="tracking-data" 
+             data-pt="utility"              data-pstcat="汽車館_Toyota 豐田_車系列表"                    data-yrid="4tlhkollfqjq3"     ></span>
+    <header>
+    <ul class="top-nav">
+        <a class="gabtn" href="https://tw.yahoo.com/" title="首頁" data-ga="['UH','UH_頻道入口','UH_首頁']"><li>首頁</li></a>
+        <a class="gabtn" href="https://tw.mail.yahoo.com/" title="信箱" data-ga="['UH','UH_頻道入口','UH_信箱']"><li>信箱</li></a>
+        <a class="gabtn" href="https://tw.news.yahoo.com/" title="新聞" data-ga="['UH','UH_頻道入口','UH_新聞']"><li>新聞</li></a>
+        <a class="gabtn" href="https://tw.stock.yahoo.com/" title="股市" data-ga="['UH','UH_頻道入口','UH_股市']"><li>股市</li></a>
+        <a class="gabtn" href="https://tw.news.yahoo.com/weather-forecast/" title="氣象" data-ga="['UH','UH_頻道入口','UH_氣象']"><li>氣象</li></a>
+        <a class="gabtn" href="https://tw.sports.yahoo.com/" title="運動" data-ga="['UH','UH_頻道入口','UH_運動']"><li>運動</li></a>
+        <a class="gabtn" href="https://tw.video.yahoo.com/" title="Yahoo TV" data-ga="['UH','UH_頻道入口','UH_Yahoo TV']"><li>Yahoo TV</li></a>
+        <a class="gabtn" href="https://tw.news.yahoo.com/entertainment" title="娛樂" data-ga="['UH','UH_頻道入口','UH_娛樂']"><li>娛樂</li></a>
+        <a class="gabtn" href="https://movies.yahoo.com.tw/" title="電影" data-ga="['UH','UH_頻道入口','UH_電影']"><li>電影</li></a>
+        <a class="gabtn" href="https://tw.buy.yahoo.com/" title="購物中心" data-ga="['UH','UH_頻道入口','UH_購物中心']"><li>購物中心</li></a>
+        <a class="gabtn" href="https://tw.bid.yahoo.com/" title="拍賣" data-ga="['UH','UH_頻道入口','UH_拍賣']"><li>拍賣</li></a>
+
+        <li title="更多" class="top-nav-more">
+            更多
+            <ul class="top-nav-hide">
+                <a class="gabtn" href="https://autos.yahoo.com.tw/" title="汽車機車" data-ga="['UH','UH_頻道入口','UH_汽車機車']"><li>汽車機車</li></a>
+                <a class="gabtn" href="https://tw.dictionary.yahoo.com" title="字典" data-ga="['UH','UH_頻道入口','UH_字典']"><li>字典</li></a>
+                <a class="gabtn" href="https://games.yahoo.com.tw/" title="遊戲" data-ga="['UH','UH_頻道入口','UH_遊戲']"><li>遊戲</li></a>
+                <a class="gabtn" href="https://travel.yahoo.com.tw/" title="旅遊" data-ga="['UH','UH_頻道入口','UH_旅遊']"><li>旅遊</li></a>
+                <a class="gabtn" href="https://tw.money.yahoo.com/" title="理財" data-ga="['UH','UH_頻道入口','UH_理財']"><li>理財</li></a>
+                <a class="gabtn" href="https://house.yahoo.com.tw/" title="房地產" data-ga="['UH','UH_頻道入口','UH_房地產']"><li>房地產</li></a>
+                <a class="gabtn" href="https://style.yahoo.com.tw/" title="時尚美妝" data-ga="['UH','UH_頻道入口','UH_時尚美妝']"><li>時尚美妝</li></a>
+                <a class="gabtn" href="https://tw.news.yahoo.com/technology" title="3C科技" data-ga="['UH','UH_頻道入口','UH_3C科技']"><li>3C科技</li></a>
+                <a class="gabtn" href="https://tw.discount.yahoo.net/index.php?group=all" title="折扣城" data-ga="['UH','UH_頻道入口','UH_折扣城']"><li>折扣城</li></a>
+            </ul>
+        </li>
+    </ul>
+    <div class="search-head">
+        <ul>
+            <a class="logo gabtn" href="https://autos.yahoo.com.tw" title="Yahoo! 汽車機車" data-ga="['UH','UH_Logo','N/A']">
+                <img src="/images/logo_pc_v2.png?id=522683f9afe8971d6d30faf9d8fa30be" alt="Yahoo Logo" srcset="/images/logo_pc_v2@2x.png?id=deecd8f34e3870392f7a541a0e937adf 2x, /images/logo_pc_v2@3x.png?id=43bde673f132fddc2a67caa9b636f8c9 3x" /> 
+            </a>
+
+            <li class="search-bar">
+                <ul>
+                    <li>
+                        <form method="get" action="https://tw.search.yahoo.com/search" target="_blank">
+                            <input type="text" name="p">
+                            <input type="hidden" name="fr" value="uh3_autos_web_gs">
+                            <button class="search-btn blue gabtn" data-ga="['UH','UH_網頁搜尋','N/A']">網頁搜尋</button>
+                        </form>
+                    </li>
+
+                                            <li>
+                            
+                            
+                        </li>
+                    
+                </ul>
+            </li>
+            
+            
+
+        </ul>
+    </div>
+
+    <div class="common-nav-holder">
+
+    <nav class="common-nav">
+        <ul>
+
+            
+                    <a class="gabtn" href="/" title="首頁"
+               target="_self" data-ga="['選單', '第一層_首頁', 'N/A']"
+            ><li>首頁</li></a>
+                    
+                    
+            <li class="relative">
+                                新車
+                <ul class="common-nav-lg">
+  <li>
+              <a class="gabtn" href="/new-cars/" title="找新車"
+        data-ga="['選單', '第二層_新車', '找新車']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/1-找汽車.png" alt="找新車">
+          <span>找新車</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/cars-compare/" title="車款比較"
+        data-ga="['選單', '第二層_新車', '車款比較']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/5-車款比較.png" alt="車款比較">
+          <span>車款比較</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/new-cars/research/" title="汽車資料庫"
+        data-ga="['選單', '第二層_新車', '汽車資料庫']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/4-汽車資料庫.png" alt="汽車資料庫">
+          <span>汽車資料庫</span>
+        </span>
+      </a>
+              <br>
+                <a class="gabtn" href="/popular-cars/" title="熱門新車排行"
+        data-ga="['選單', '第二層_新車', '熱門新車排行']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/2- 熱門車排行.png" alt="熱門新車排行">
+          <span>熱門新車排行</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/car-topics/" title="汽車特輯"
+        data-ga="['選單', '第二層_新車', '汽車特輯']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/3-汽車特輯.png" alt="汽車特輯">
+          <span>汽車特輯</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/latest-cars/" title="最新上架車款"
+        data-ga="['選單', '第二層_新車', '最新上架車款']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/October2019/car_20191023.png" alt="最新上架車款">
+          <span>最新上架車款</span>
+        </span>
+      </a>
+              <br>
+            </li>
+      <li>
+      <ul>
+                          <li><a class="gabtn" href="/car-news/" title="汽車新聞"
+            data-ga="['選單', '第二層_新車', '汽車新聞']" target="_self"
+          >汽車新聞</a></li>
+                            <li><a class="gabtn" href="/car-news/新車試駕#index-news" title="新車試駕"
+            data-ga="['選單', '第二層_新車', '新車試駕']" target="_self"
+          >新車試駕</a></li>
+                            <li><a class="gabtn" href="/car-news/明星愛車#index-news" title="明星愛車"
+            data-ga="['選單', '第二層_新車', '明星愛車']" target="_self"
+          >明星愛車</a></li>
+                      <br>
+                            <li><a class="gabtn" href="/photos/" title="新車圖輯"
+            data-ga="['選單', '第二層_新車', '新車圖輯']" target="_self"
+          >新車圖輯</a></li>
+                            <li><a class="gabtn" href="/car-news/優惠快訊#index-news" title="優惠快訊"
+            data-ga="['選單', '第二層_新車', '優惠快訊']" target="_self"
+          >優惠快訊</a></li>
+                            <li><a class="gabtn" href="/car-news/售後市場#index-news" title="售後市場"
+            data-ga="['選單', '第二層_新車', '售後市場']" target="_self"
+          >售後市場</a></li>
+                      <br>
+                            <li><a class="gabtn" href="/car-news/特別企劃#index-news" title="特別企劃"
+            data-ga="['選單', '第二層_新車', '特別企劃']" target="_self"
+          >特別企劃</a></li>
+                            <li><a class="gabtn" href="/car-news/銷售排行#index-news" title="銷售排行"
+            data-ga="['選單', '第二層_新車', '銷售排行']" target="_self"
+          >銷售排行</a></li>
+                            <li><a class="gabtn" href="/car-news/賽車報導#index-news" title="賽車報導"
+            data-ga="['選單', '第二層_新車', '賽車報導']" target="_self"
+          >賽車報導</a></li>
+                      <br>
+                        </ul>
+    </li>
+  </ul>
+
+            </li>
+                    
+                    
+            <li class="relative">
+                                機車
+                <ul class="common-nav-lg">
+  <li>
+              <a class="gabtn" href="/new-bikes/" title="找機車"
+        data-ga="['選單', '第二層_機車', '找機車']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/1-找機車.png" alt="找機車">
+          <span>找機車</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/bikes-compare/" title="車款比較"
+        data-ga="['選單', '第二層_機車', '車款比較']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/5-車款比較1.png" alt="車款比較">
+          <span>車款比較</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/new-bikes/research/" title="機車資料庫"
+        data-ga="['選單', '第二層_機車', '機車資料庫']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/4-機車資料庫.png" alt="機車資料庫">
+          <span>機車資料庫</span>
+        </span>
+      </a>
+              <br>
+                <a class="gabtn" href="/popular-bikes/" title="熱門機車排行"
+        data-ga="['選單', '第二層_機車', '熱門機車排行']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/2-熱門車排行.png" alt="熱門機車排行">
+          <span>熱門機車排行</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/bike-topics/" title="機車特輯"
+        data-ga="['選單', '第二層_機車', '機車特輯']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/3-機車特輯.png" alt="機車特輯">
+          <span>機車特輯</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/latest-bikes/" title="最新上架車款"
+        data-ga="['選單', '第二層_機車', '最新上架車款']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/October2019/bike_20191023.png" alt="最新上架車款">
+          <span>最新上架車款</span>
+        </span>
+      </a>
+              <br>
+            </li>
+      <li>
+      <ul>
+                          <li><a class="gabtn" href="/bike-news/" title="機車新聞"
+            data-ga="['選單', '第二層_機車', '機車新聞']" target="_self"
+          >機車新聞</a></li>
+                            <li><a class="gabtn" href="/bike-news/機車評測#index-news" title="機車評測"
+            data-ga="['選單', '第二層_機車', '機車評測']" target="_self"
+          >機車評測</a></li>
+                            <li><a class="gabtn" href="/bike-news/優惠快訊#index-news" title="優惠快訊"
+            data-ga="['選單', '第二層_機車', '優惠快訊']" target="_self"
+          >優惠快訊</a></li>
+                      <br>
+                            <li><a class="gabtn" href="/bike-news/售後市場#index-news" title="售後市場"
+            data-ga="['選單', '第二層_機車', '售後市場']" target="_self"
+          >售後市場</a></li>
+                            <li><a class="gabtn" href="/bike-news/特別企劃#index-news" title="特別企劃"
+            data-ga="['選單', '第二層_機車', '特別企劃']" target="_self"
+          >特別企劃</a></li>
+                            <li><a class="gabtn" href="https://autos.yahoo.com.tw/news/%E6%9A%97%E9%BB%91%E5%A4%9C%E8%A1%8C%E8%80%85%EF%BC%81yamaha-mt-03%E9%9B%86%E4%BF%90%E8%90%BD%E8%BA%AB%E5%BD%A2%E3%80%81%E6%9A%A2%E5%BF%AB%E9%AB%98%E8%BD%89%E8%88%87%E8%A6%AA%E6%B0%91%E7%89%B9%E8%B3%AA%E6%96%BC%E4%B8%80%E8%BA%AB%E7%9A%84%E9%BB%83%E7%89%8C%E8%BC%95%E9%87%8F%E7%B4%9A%E8%A1%97%E8%B7%91-161000742.html" title="｜黃牌輕量街跑｜"
+            data-ga="['選單', '第二層_機車', '｜黃牌輕量街跑｜']" target="_self"
+          >｜黃牌輕量街跑｜</a></li>
+                      <br>
+                        </ul>
+    </li>
+  </ul>
+
+            </li>
+                    
+                    
+            <li class="relative">
+                                中古車
+                <ul class="common-nav-lg">
+  <li>
+              <a class="gabtn" href="/used-cars/" title="找中古車"
+        data-ga="['選單', '第二層_中古車', '找中古車']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/1-找中古車.png" alt="找中古車">
+          <span>找中古車</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/used-cars-news/主題車款推薦" title="主題車款"
+        data-ga="['選單', '第二層_中古車', '主題車款']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/4-主題車款.png" alt="主題車款">
+          <span>主題車款</span>
+        </span>
+      </a>
+                <a class="gabtn" href="/used-cars-news/本季行情分析" title="行情分析"
+        data-ga="['選單', '第二層_中古車', '行情分析']" target="_self"
+      >
+        <span class="wrapper">
+          <img src="https://autos.yahoo.com.tw//p/r/w28/menu_items/November2017/2-行情分析.png" alt="行情分析">
+          <span>行情分析</span>
+        </span>
+      </a>
+              <br>
+            </li>
+  </ul>
+
+            </li>
+                    
+                    <a class="gabtn" href="/videos/" title="影音"
+               target="_self" data-ga="['選單', '第一層_影音', 'N/A']"
+            ><li>影音</li></a>
+                    
+                    <a class="gabtn" href="https://yahoo.ebo.tmnewa.com.tw/tmnewa/portal/index?hashcal=1&amp;car_make_id=74&amp;utm_source=yahoo&amp;utm_medium=yahoo-referral-autos&amp;utm_campaign=yahoo-referral-autos-car&amp;utm_content=2Ed#calc-tool" title="車險試算"
+               target="_blank" data-ga="['選單', '第一層_車險試算', 'N/A']"
+            ><li>車險試算</li></a>
+                    
+                    <a class="gabtn" href="https://autos.yahoo.com.tw/car-topics/2026EV" title="電動車大洗牌"
+               target="_self" data-ga="['選單', '第一層_電動車大洗牌', 'N/A']"
+            ><li>電動車大洗牌</li></a>
+                        <li class="subscribe">
+                <ul>
+                                                                    <li>
+                                <a href="https://www.facebook.com/YahooAutosTaiwan/" title="" target="_blank"
+                                   class="gabtn" data-ga="['選單', 'Follow', 'Follow_fb']">
+                                    <img src="https://autos.yahoo.com.tw//p/r/w25/mod-wordings/May2018/8DcCWdsBGv1RDMi9DC76.png"
+                                      alt="">
+                                </a>
+                            </li>
+                                                                        <li>
+                                <a href="https://www.instagram.com/yahootwautos/" title="" target="_blank"
+                                   class="gabtn" data-ga="['選單', 'Follow', 'Follow_ig']">
+                                    <img src="https://autos.yahoo.com.tw//p/r/w25/mod-wordings/May2018/OvrWkp4EgGqYd4W9vFM4.png"
+                                      alt="">
+                                </a>
+                            </li>
+                                                                        <li><a href="https://www.youtube.com/channel/UCklmBc-HxgA7j62DE8PWLQA" title="" target="_blank"
+                                   class="gabtn" data-ga="['選單', 'Follow', 'Follow_youtube']">
+                                <img src="https://autos.yahoo.com.tw//p/r/w25/mod-wordings/May2018/YhtZ2B8OHnP9De4knKGs.png" alt=""></a>
+                            </li>
+                                        </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+</header>
+<!-- /header -->
+
+    <div class="body-wrapper">
+                
+          <div class="ad-LDRB-728x90">
+	<div id="boxLDRB" class="yom-ad ad-N force-responsive">
+   <div id="tgtLDRB" class="adpos">
+      <div class="ad-placeholder h-250">廣告</div>
+   </div>
+
+</div> <!-- ad N. --> 
+</div>
+        <div class="main">
+
+              <!--
+Event snippet for 雅虎汽車頻道 on : Please do not remove.
+Place this snippet on pages with events you’re tracking. 
+Creation date: 03/01/2026
+-->
+
+<script>
+  window.addEventListener('load', function () {
+    if (typeof dv_gtag !== 'undefined') {
+      dv_gtag('event', 'conversion', {
+        'allow_custom_scripts': true,
+        'u1': 'Toyota',
+        'u2': '',
+        'u3': 'RT',
+        'send_to': 'DC-16511126/invmedia/l0_zg0+standard'
+      });
+    }
+  });
+</script>
+<!-- End of event snippet: Please do not remove -->
+<!--
+Event snippet for 雅虎汽車頻道 on : Please do not remove.
+Place this snippet on pages with events you’re tracking. 
+Creation date: 03/01/2026
+-->
+<noscript>
+<img src="https://ad.doubleclick.net/ddm/activity/src=16511126;type=invmedia;cat=l0_zg0;u1=Toyota;u2=;u3=RT;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>
+</noscript>
+
+<!-- End of event snippet: Please do not remove -->
+  <div class="bread">
+    <span>
+        <a class="gabtn" href="https://autos.yahoo.com.tw" title="回首頁" data-ga="['麵包屑1_首頁', 'N/A', 'N/A']">首頁</a>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <a class="gabtn" href="https://autos.yahoo.com.tw/new-cars/research" title="汽車廠牌"
+                data-ga="['麵包屑1_首頁', '麵包屑2_汽車廠牌', 'N/A']"
+              >汽車廠牌</a>
+                                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <a class="disabled">Toyota 豐田</a>
+                      </span>
+</div>
+
+  <div class="make-main jq-make-wrapper" data-href="https://autos.yahoo.com.tw/ajax/api_car_make/toyota">
+    <h1 class="title">Toyota 豐田</h1>
+  <div class="nav-holder nav">
+    <ul class="fixed-nav">
+      <a class="gabtn"
+        href="https://autos.yahoo.com.tw/new-cars/make/toyota"
+        data-ga="['汽車車廠', '汽車_Toyota 豐田_tab_車系介紹', 'N/A']"
+      >
+        <li class=" picked " title="車系介紹">車系介紹</li>
+      </a>
+
+              <a class="gabtn"
+           href="https://autos.yahoo.com.tw/new-cars/make/toyota/news"
+           data-ga="['汽車車廠', '汽車_Toyota 豐田_tab_品牌新聞', 'N/A']"
+        >
+          <li class="" title="品牌新聞">品牌新聞</li>
+        </a>
+      
+              <a class="gabtn"
+           href="https://autos.yahoo.com.tw/new-cars/make/toyota/video"
+           data-ga="['汽車車廠', '汽車_Toyota 豐田_tab_品牌影音', 'N/A']"
+        >
+          <li class="" title="品牌影音">品牌影音</li>
+        </a>
+      
+      <a class="gabtn"
+         href="https://autos.yahoo.com.tw/new-cars/make/toyota/usedcar"
+         data-ga="['汽車車廠', '汽車_Toyota 豐田_tab_中古車推薦', 'N/A']">
+        <li class="" title="中古車推薦">中古車推薦</li>
+      </a>
+    </ul>
+  </div>
+
+          <div class="year jq-year-2027  " data-year=2027>
+        <div class="year-title">
+          2027
+        </div>
+
+                              <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-camry-2027"
+    title="2027 Toyota Camry"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2027 Camry']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/October2026/q8pbzDVLczQGbinEOT9K.jpeg" alt="2027 Toyota Camry">
+        </div>
+        <span class="title">2027 Toyota Camry</span>
+        <span class="price ">100.9 - 125</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-crown-crossover-2027"
+    title="2027 Toyota Crown Crossover"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2027 Crown Crossover']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/October2026/ejGKhb5HUV4cQSpUNIjS.jpg" alt="2027 Toyota Crown Crossover">
+        </div>
+        <span class="title">2027 Toyota Crown Crossover</span>
+        <span class="price ">157 - 195</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-crown-sport-2027"
+    title="2027 Toyota Crown Sport"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2027 Crown Sport']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/October2026/luDd7LWEUn2miileRpYi.jpg" alt="2027 Toyota Crown Sport">
+        </div>
+        <span class="title">2027 Toyota Crown Sport</span>
+        <span class="price ">169 - 209</span>
+    </div>
+</a>
+                        </div>
+          <div class="year jq-year-2026  " data-year=2026>
+        <div class="year-title">
+          2026
+        </div>
+
+                              <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-alphard-2026"
+    title="2026 Toyota Alphard"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Alphard']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/zNSyEjd8ZWnZREOHV3j2.jpeg" alt="2026 Toyota Alphard">
+        </div>
+        <span class="title">2026 Toyota Alphard</span>
+        <span class="price ">316 - 330</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-bz-2026"
+    title="2026 Toyota bZ"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 bZ']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/October2025/sxDzdlITjFYLwUw5na6M.jpg" alt="2026 Toyota bZ">
+        </div>
+        <span class="title">2026 Toyota bZ</span>
+        <span class="price ">128 - 128</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-camry-2026"
+    title="2026 Toyota Camry"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Camry']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/GvWUtZe3akFsbe68wvE1.jpeg" alt="2026 Toyota Camry">
+        </div>
+        <span class="title">2026 Toyota Camry</span>
+        <span class="price ">98.5 - 125</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-corolla-altis-2026"
+    title="2026 Toyota Corolla Altis"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Corolla Altis']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/October2025/YCkWHRBMq03C5wS00F2y.jpg" alt="2026 Toyota Corolla Altis">
+        </div>
+        <span class="title">2026 Toyota Corolla Altis</span>
+        <span class="price ">73.5 - 91.9</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-corolla-cross-2026"
+    title="2026 Toyota Corolla Cross"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Corolla Cross']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/October2025/sSKb3XORAtVlJgQcIrjy.jpg" alt="2026 Toyota Corolla Cross">
+        </div>
+        <span class="title">2026 Toyota Corolla Cross</span>
+        <span class="price ">80.9 - 98.9</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-corolla-sport-2026"
+    title="2026 Toyota Corolla Sport"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Corolla Sport']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/q9xI9xbkWWd4dxvrpPID.jpeg" alt="2026 Toyota Corolla Sport">
+        </div>
+        <span class="title">2026 Toyota Corolla Sport</span>
+        <span class="price ">96.9 - 96.9</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-crown-2026"
+    title="2026 Toyota Crown"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Crown']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/IjLVrMxuTYDm7Y5FC3ZI.jpeg" alt="2026 Toyota Crown">
+        </div>
+        <span class="title">2026 Toyota Crown</span>
+        <span class="price ">157 - 210</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-gr-supra-2026"
+    title="2026 Toyota GR Supra"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 GR Supra']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/6iESvVvSBRabDUclxlKg.jpeg" alt="2026 Toyota GR Supra">
+        </div>
+        <span class="title">2026 Toyota GR Supra</span>
+        <span class="price ">266 - 280</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-gr-yaris-2026"
+    title="2026 Toyota GR Yaris"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 GR Yaris']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/2gbTBdHSn71lw65P5WNK.jpeg" alt="2026 Toyota GR Yaris">
+        </div>
+        <span class="title">2026 Toyota GR Yaris</span>
+        <span class="price ">195 - 199</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-gr86-2026"
+    title="2026 Toyota GR86"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 GR86']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/Totz8cppHlpHZuumDQla.jpeg" alt="2026 Toyota GR86">
+        </div>
+        <span class="title">2026 Toyota GR86</span>
+        <span class="price ">177 - 178</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-granvia-2026"
+    title="2026 Toyota Granvia"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Granvia']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/3hNB8Ia55jPYVsWruewu.jpeg" alt="2026 Toyota Granvia">
+        </div>
+        <span class="title">2026 Toyota Granvia</span>
+        <span class="price ">175.2 - 205</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-hilux-2026"
+    title="2026 Toyota Hilux"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Hilux']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/aB5GK5LvdV9WQeQjj4ag.jpeg" alt="2026 Toyota Hilux">
+        </div>
+        <span class="title">2026 Toyota Hilux</span>
+        <span class="price ">159.5 - 159.5</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-hilux%28new%29-2026"
+    title="2026 Toyota Hilux(NEW)"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Hilux(NEW)']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/July2026/86y91uaJ86YPkpWkqpWa.jpg" alt="2026 Toyota Hilux(NEW)">
+        </div>
+        <span class="title">2026 Toyota Hilux(NEW)</span>
+        <span class="price ">161.9 - 161.9</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-land-cruiser-2026"
+    title="2026 Toyota Land Cruiser"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Land Cruiser']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/EfCp3FwTk6yHCn6k5gzG.jpeg" alt="2026 Toyota Land Cruiser">
+        </div>
+        <span class="title">2026 Toyota Land Cruiser</span>
+        <span class="price ">288 - 290</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-prius-phev-2026"
+    title="2026 Toyota Prius PHEV"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Prius PHEV']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/Tpx9V5A808he2lWrCGsc.jpeg" alt="2026 Toyota Prius PHEV">
+        </div>
+        <span class="title">2026 Toyota Prius PHEV</span>
+        <span class="price ">129.9 - 137.9</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-rav4-2026"
+    title="2026 Toyota RAV4"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 RAV4']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/January2026/kPWqn0t1nL0OLhALjZdI.jpg" alt="2026 Toyota RAV4">
+        </div>
+        <span class="title">2026 Toyota RAV4</span>
+        <span class="price ">104 - 149</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-sienna-2026"
+    title="2026 Toyota Sienna"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Sienna']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/July2026/qPKKcq80MYqafrYtLT4f.jpg" alt="2026 Toyota Sienna">
+        </div>
+        <span class="title">2026 Toyota Sienna</span>
+        <span class="price ">239 - 296</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-urban-2026"
+    title="2026 Toyota Urban Cruiser"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Urban Cruiser']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/December2025/PJXJciSeJEGNywiErBaF.jpg" alt="2026 Toyota Urban Cruiser">
+        </div>
+        <span class="title">2026 Toyota Urban Cruiser</span>
+        <span class="price ">127 - 127</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-vios-2026"
+    title="2026 Toyota Vios"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Vios']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/1lgEJnuhWd0XnNbXarp9.jpeg" alt="2026 Toyota Vios">
+        </div>
+        <span class="title">2026 Toyota Vios</span>
+        <span class="price ">60.9 - 67.5</span>
+    </div>
+</a>
+                      <a
+    class="gabtn"
+    href="https://autos.yahoo.com.tw/new-cars/model/toyota-yaris-cross-2026"
+    title="2026 Toyota Yaris Cross"
+    data-ga="['汽車車廠', '汽車_Toyota_車系介紹', '汽車_Toyota_2026 Yaris Cross']"
+>
+    <div class="year-single">
+        <div class="img-wrapper">
+            <img src="https://autos.yahoo.com.tw//p/r/w644/car-models/February2026/2lTFwKufz76IZ6WheAEV.jpeg" alt="2026 Toyota Yaris Cross">
+        </div>
+        <span class="title">2026 Toyota Yaris Cross</span>
+        <span class="price ">69.5 - 79.5</span>
+    </div>
+</a>
+                        </div>
+          <div class="year jq-year-2025  jq-no-model " data-year=2025>
+        <div class="year-title">
+          2025
+        </div>
+
+              </div>
+          <div class="year jq-year-2024  jq-no-model " data-year=2024>
+        <div class="year-title">
+          2024
+        </div>
+
+              </div>
+          <div class="year jq-year-2023  jq-no-model " data-year=2023>
+        <div class="year-title">
+          2023
+        </div>
+
+              </div>
+          <div class="year jq-year-2022  jq-no-model " data-year=2022>
+        <div class="year-title">
+          2022
+        </div>
+
+              </div>
+          <div class="year jq-year-2021  jq-no-model " data-year=2021>
+        <div class="year-title">
+          2021
+        </div>
+
+              </div>
+          <div class="year jq-year-2020  jq-no-model " data-year=2020>
+        <div class="year-title">
+          2020
+        </div>
+
+              </div>
+          <div class="year jq-year-2019  jq-no-model " data-year=2019>
+        <div class="year-title">
+          2019
+        </div>
+
+              </div>
+          <div class="year jq-year-2018  jq-no-model " data-year=2018>
+        <div class="year-title">
+          2018
+        </div>
+
+              </div>
+          <div class="year jq-year-2017  jq-no-model " data-year=2017>
+        <div class="year-title">
+          2017
+        </div>
+
+              </div>
+          <div class="year jq-year-2016  jq-no-model " data-year=2016>
+        <div class="year-title">
+          2016
+        </div>
+
+              </div>
+          <div class="year jq-year-2015  jq-no-model " data-year=2015>
+        <div class="year-title">
+          2015
+        </div>
+
+              </div>
+          <div class="year jq-year-2014  jq-no-model " data-year=2014>
+        <div class="year-title">
+          2014
+        </div>
+
+              </div>
+          <div class="year jq-year-2013  jq-no-model " data-year=2013>
+        <div class="year-title">
+          2013
+        </div>
+
+              </div>
+          <div class="year jq-year-2012  jq-no-model " data-year=2012>
+        <div class="year-title">
+          2012
+        </div>
+
+              </div>
+          <div class="year jq-year-2011  jq-no-model " data-year=2011>
+        <div class="year-title">
+          2011
+        </div>
+
+              </div>
+          <div class="year jq-year-2010  jq-no-model " data-year=2010>
+        <div class="year-title">
+          2010
+        </div>
+
+              </div>
+          <div class="year jq-year-2009  jq-no-model " data-year=2009>
+        <div class="year-title">
+          2009
+        </div>
+
+              </div>
+          <div class="year jq-year-2008  jq-no-model " data-year=2008>
+        <div class="year-title">
+          2008
+        </div>
+
+              </div>
+      </div>
+
+  <span id="tracking-dot-pages" class="tracking-dot-pages">
+
+            <img src="https://sp.analytics.yahoo.com/spp.pl?a=10000&.yp=428726&country=tw&property=auto"/>
+
+    
+      </span>
+        </div>
+
+        <div class="right-holder">
+            <div class="right">
+
+                  <div class="ad-LREC-300x250">
+	<div id="boxLREC" class="yom-ad LREC">
+	  
+	  
+	    
+	  
+	  <div id="tgtLREC" class="adpos">
+		<div class="ad-placeholder">廣告</div>
+	  </div>
+
+	</div>
+</div>  <div class="search-right">
+  <input id="search-right-car" type="radio" name="search-right-tab"
+         class="gabtn" data-ga="['右欄_快速搜尋', '右欄_快速搜尋_找新車', '快速搜尋_找新車_Tab']"
+          checked >
+  <label for="search-right-car" class="search-tab">找新車</label>
+  <input id="search-right-bike" type="radio" name="search-right-tab"
+         class="gabtn" data-ga="['右欄_快速搜尋', '右欄_快速搜尋_找機車', '快速搜尋_找機車_Tab']"
+         >
+  <label for="search-right-bike" class="search-tab">找機車</label>
+  <input id="search-right-usedcar" type="radio" name="search-right-tab"
+         class="gabtn" data-ga="['右欄_快速搜尋', '右欄_快速搜尋_找中古車', '快速搜尋_找中古車_Tab']"
+         >
+  <label for="search-right-usedcar" class="search-tab">找中古車</label>
+      <div class="search-content search-right-car">
+      <form class="search-right-form" autocomplete="off" data-href="https://autos.yahoo.com.tw/car-search">
+        <ul>
+          <li>
+            <select id="car_make_id_right" name="make_id" data-href="https://autos.yahoo.com.tw/v1/autos/newcar/model/list/make">
+              <option value="" hidden>廠牌</option>
+              
+                              <option value="118" >
+                  AC Cars
+                </option>
+                              <option value="2" >
+                  Alfa Romeo
+                </option>
+                              <option value="96" >
+                  Aston Martin
+                </option>
+                              <option value="6" >
+                  Audi 奧迪
+                </option>
+                              <option value="8" >
+                  Bentley 賓利
+                </option>
+                              <option value="11" >
+                  BMW 寶馬
+                </option>
+                              <option value="104" >
+                  Citroen 雪鐵龍
+                </option>
+                              <option value="117" >
+                  Dallara
+                </option>
+                              <option value="22" >
+                  Ferrari 法拉利
+                </option>
+                              <option value="24" >
+                  Ford 福特
+                </option>
+                              <option value="119" >
+                  Foxtron 鴻華先進
+                </option>
+                              <option value="28"  selected >
+                  Honda 本田
+                </option>
+                              <option value="30" >
+                  Hyundai 現代
+                </option>
+                              <option value="115" >
+                  Ineos
+                </option>
+                              <option value="32" >
+                  Infiniti
+                </option>
+                              <option value="36" >
+                  Jeep 吉普
+                </option>
+                              <option value="37" >
+                  Kia 起亞
+                </option>
+                              <option value="116" >
+                  KTM Sportcar
+                </option>
+                              <option value="88" >
+                  Lamborghini
+                </option>
+                              <option value="85" >
+                  Land Rover
+                </option>
+                              <option value="41" >
+                  Lexus 凌志
+                </option>
+                              <option value="99" >
+                  Lotus 蓮花
+                </option>
+                              <option value="95" >
+                  Luxgen 納智捷
+                </option>
+                              <option value="9" >
+                  M-Benz 賓士
+                </option>
+                              <option value="44" >
+                  Maserati 瑪莎拉蒂
+                </option>
+                              <option value="45" >
+                  Mazda 馬自達
+                </option>
+                              <option value="102" >
+                  McLaren 麥拉倫
+                </option>
+                              <option value="114" >
+                  MG
+                </option>
+                              <option value="86" >
+                  Mini 迷你
+                </option>
+                              <option value="48" >
+                  Mitsubishi 三菱
+                </option>
+                              <option value="103" >
+                  Morgan
+                </option>
+                              <option value="50" >
+                  Nissan 日產
+                </option>
+                              <option value="53" >
+                  Opel
+                </option>
+                              <option value="55" >
+                  Peugeot 寶獅
+                </option>
+                              <option value="59" >
+                  Porsche 保時捷
+                </option>
+                              <option value="101" >
+                  Rolls-Royce 勞斯萊斯
+                </option>
+                              <option value="87" >
+                  Skoda
+                </option>
+                              <option value="69" >
+                  Subaru 速霸陸
+                </option>
+                              <option value="71" >
+                  Suzuki 鈴木
+                </option>
+                              <option value="106" >
+                  Tesla 特斯拉
+                </option>
+                              <option value="74" >
+                  Toyota 豐田
+                </option>
+                              <option value="76" >
+                  Volkswagen 福斯
+                </option>
+                              <option value="78" >
+                  Volvo 富豪
+                </option>
+                          </select>
+
+          </li>
+          <li>
+            <select id="car_model_id_right" name="model_id" >
+              <option value="">所有車系</option>
+                                                <option value="7700" >
+                    2027 Prelude
+                  </option>
+                                  <option value="7757"  selected >
+                    2027 Civic
+                  </option>
+                                  <option value="7530" >
+                    2026 Fit
+                  </option>
+                                  <option value="7531" >
+                    2026 HR-V
+                  </option>
+                                  <option value="7686" >
+                    2026 CR-V(NEW)
+                  </option>
+                                  <option value="7737" >
+                    2026 ZR-V
+                  </option>
+                                          </select>
+          </li>
+        </ul>
+        <button type="submit"           class="gabtn" data-ga="['右欄_快速搜尋', '右欄_快速搜尋_找新車', '快速搜尋_找新車_放大鏡']">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+        <div class="search-content search-right-bike">
+      <form class="search-right-form" autocomplete="off" data-href="https://autos.yahoo.com.tw/bike-search">
+        <ul>
+          <li>
+            <select id="bike_make_id_right" name="make_id" data-href='https://autos.yahoo.com.tw/v1/autos/newbike/model/list/make'>
+              <option value="" hidden>廠牌</option>
+              
+                              <option value="20" >
+                  Aeonmotor 宏佳騰
+                </option>
+                              <option value="16" >
+                  Aprilia
+                </option>
+                              <option value="15" >
+                  BMW
+                </option>
+                              <option value="6" >
+                  Ducati 杜卡迪
+                </option>
+                              <option value="25" >
+                  eMOVING
+                </option>
+                              <option value="40" >
+                  eReady
+                </option>
+                              <option value="26" >
+                  Gogoro
+                </option>
+                              <option value="7" >
+                  Harley-Davidson 哈雷
+                </option>
+                              <option value="8" >
+                  Hartford 哈特佛
+                </option>
+                              <option value="19" >
+                  Honda 本田
+                </option>
+                              <option value="4" >
+                  Kawasaki 川崎
+                </option>
+                              <option value="10" >
+                  KTM
+                </option>
+                              <option value="1" >
+                  Kymco 光陽
+                </option>
+                              <option value="44" >
+                  Lambretta 蘭美達
+                </option>
+                              <option value="2" >
+                  PGO
+                </option>
+                              <option value="47" >
+                  Royal Enfield
+                </option>
+                              <option value="5" >
+                  Suzuki 鈴木
+                </option>
+                              <option value="13" >
+                  SYM 三陽
+                </option>
+                              <option value="14" >
+                  Triumph 凱旋
+                </option>
+                              <option value="21"  selected >
+                  Vespa
+                </option>
+                              <option value="3" >
+                  Yamaha 山葉
+                </option>
+                              <option value="45" >
+                  ZAU
+                </option>
+                          </select>
+          </li>
+          <li>
+            <select id="bike_model_id_right" name="model_id" >
+              <option value="">所有車系</option>
+                                                <option value="3328" >
+                    2026 946
+                  </option>
+                                  <option value="3476" >
+                    2026 Primavera
+                  </option>
+                                  <option value="3477" >
+                    2026 Sprint
+                  </option>
+                                  <option value="3478" >
+                    2026 GTS
+                  </option>
+                                  <option value="3489" >
+                    2026 GTV
+                  </option>
+                                  <option value="3492"  selected >
+                    2026 LX
+                  </option>
+                                          </select>
+          </li>
+        </ul>
+        <button type="submit"           class="gabtn" data-ga="['右欄_快速搜尋', '右欄_快速搜尋_找機車', '快速搜尋_找機車_放大鏡']">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+        <div class="search-content search-right-usedcar">
+      <form class="search-right-form" autocomplete="off" data-href="https://autos.yahoo.com.tw/usedcar-search">
+        <ul>
+          <li>
+                        <select id="usedcars_make_id_right" name="make_name" data-href="https://autos.yahoo.com.tw/v1/autos/usedcar/model/list">
+              <option value="" hidden>廠牌</option>
+                              <option
+                  value="AC Cars" >
+                  AC Cars
+                </option>
+                              <option
+                  value="Alfa Romeo" >
+                  Alfa Romeo
+                </option>
+                              <option
+                  value="Aston Martin" >
+                  Aston Martin
+                </option>
+                              <option
+                  value="Audi" >
+                  Audi 奧迪
+                </option>
+                              <option
+                  value="Bentley" >
+                  Bentley 賓利
+                </option>
+                              <option
+                  value="BMW" >
+                  BMW 寶馬
+                </option>
+                              <option
+                  value="Bugatti" >
+                  Bugatti
+                </option>
+                              <option
+                  value="Buick" >
+                  Buick 別克
+                </option>
+                              <option
+                  value="Cadillac" >
+                  Cadillac 凱迪拉克
+                </option>
+                              <option
+                  value="Chery" >
+                  Chery
+                </option>
+                              <option
+                  value="Chrysler" >
+                  Chrysler 克萊斯勒
+                </option>
+                              <option
+                  value="Citroen" >
+                  Citroen 雪鐵龍
+                </option>
+                              <option
+                  value="Daihatsu" >
+                  Daihatsu 大發
+                </option>
+                              <option
+                  value="Dallara" >
+                  Dallara
+                </option>
+                              <option
+                  value="Ferrari" >
+                  Ferrari 法拉利
+                </option>
+                              <option
+                  value="Fiat" >
+                  Fiat 飛雅特
+                </option>
+                              <option
+                  value="Ford" >
+                  Ford 福特
+                </option>
+                              <option
+                  value="Foxtron" >
+                  Foxtron 鴻華先進
+                </option>
+                              <option
+                  value="Honda" >
+                  Honda 本田
+                </option>
+                              <option
+                  value="Hyundai" >
+                  Hyundai 現代
+                </option>
+                              <option
+                  value="Ineos" >
+                  Ineos
+                </option>
+                              <option
+                  value="Infiniti" >
+                  Infiniti
+                </option>
+                              <option
+                  value="Jaguar" >
+                  Jaguar 捷豹
+                </option>
+                              <option
+                  value="Jeep" >
+                  Jeep 吉普
+                </option>
+                              <option
+                  value="Kia" >
+                  Kia 起亞
+                </option>
+                              <option
+                  value="KTM Sportcar" >
+                  KTM Sportcar
+                </option>
+                              <option
+                  value="Lamborghini" >
+                  Lamborghini
+                </option>
+                              <option
+                  value="Land Rover" >
+                  Land Rover
+                </option>
+                              <option
+                  value="Lexus" >
+                  Lexus 凌志
+                </option>
+                              <option
+                  value="Lotus" >
+                  Lotus 蓮花
+                </option>
+                              <option
+                  value="Luxgen" >
+                  Luxgen 納智捷
+                </option>
+                              <option
+                  value="M-Benz" >
+                  M-Benz 賓士
+                </option>
+                              <option
+                  value="Mahindra" >
+                  Mahindra
+                </option>
+                              <option
+                  value="Maserati" >
+                  Maserati 瑪莎拉蒂
+                </option>
+                              <option
+                  value="Mazda" >
+                  Mazda 馬自達
+                </option>
+                              <option
+                  value="McLaren" >
+                  McLaren 麥拉倫
+                </option>
+                              <option
+                  value="MG" >
+                  MG
+                </option>
+                              <option
+                  value="Mini" >
+                  Mini 迷你
+                </option>
+                              <option
+                  value="Mitsubishi" >
+                  Mitsubishi 三菱
+                </option>
+                              <option
+                  value="Morgan" >
+                  Morgan
+                </option>
+                              <option
+                  value="Nissan" >
+                  Nissan 日產
+                </option>
+                              <option
+                  value="Opel" >
+                  Opel
+                </option>
+                              <option
+                  value="Peugeot" >
+                  Peugeot 寶獅
+                </option>
+                              <option
+                  value="Porsche" selected=&quot;selected&quot;>
+                  Porsche 保時捷
+                </option>
+                              <option
+                  value="Proton" >
+                  Proton 寶騰
+                </option>
+                              <option
+                  value="Renault" >
+                  Renault 雷諾
+                </option>
+                              <option
+                  value="Rolls-Royce" >
+                  Rolls-Royce 勞斯萊斯
+                </option>
+                              <option
+                  value="Saab" >
+                  Saab 紳寶
+                </option>
+                              <option
+                  value="Skoda" >
+                  Skoda
+                </option>
+                              <option
+                  value="Smart" >
+                  Smart
+                </option>
+                              <option
+                  value="Ssangyong" >
+                  Ssangyong 雙龍
+                </option>
+                              <option
+                  value="Subaru" >
+                  Subaru 速霸陸
+                </option>
+                              <option
+                  value="Suzuki" >
+                  Suzuki 鈴木
+                </option>
+                              <option
+                  value="Tesla" >
+                  Tesla 特斯拉
+                </option>
+                              <option
+                  value="Tobe" >
+                  Tobe 酷比
+                </option>
+                              <option
+                  value="Toyota" >
+                  Toyota 豐田
+                </option>
+                              <option
+                  value="Volkswagen" >
+                  Volkswagen 福斯
+                </option>
+                              <option
+                  value="Volvo" >
+                  Volvo 富豪
+                </option>
+                          </select>
+          </li>
+          <li>
+            <select id="usedcars_model_id_right" name="model_name"
+                    >
+              <option value="">所有車系</option>
+                                                <option value="Cayenne Coupe Electric"
+                          >
+                    Cayenne Coupe Electric
+                  </option>
+                                  <option value="Cayenne Electric"
+                          >
+                    Cayenne Electric
+                  </option>
+                                  <option value="Cayenne Coupe"
+                          >
+                    Cayenne Coupe
+                  </option>
+                                  <option value="Cayenne"
+                          >
+                    Cayenne
+                  </option>
+                                  <option value="Macan"
+                          >
+                    Macan
+                  </option>
+                                  <option value="Panamera"
+                          >
+                    Panamera
+                  </option>
+                                  <option value="Taycan Cross Turismo"
+                          >
+                    Taycan Cross Turismo
+                  </option>
+                                  <option value="Taycan"
+                          >
+                    Taycan
+                  </option>
+                                  <option value="911 GT3"
+                          >
+                    911 GT3
+                  </option>
+                                  <option value="911 Turbo"
+                          >
+                    911 Turbo
+                  </option>
+                                  <option value="911 Targa"
+                          >
+                    911 Targa
+                  </option>
+                                  <option value="911 Carrera 4"
+                          >
+                    911 Carrera 4
+                  </option>
+                                  <option value="911 Carrera"
+                          >
+                    911 Carrera
+                  </option>
+                                  <option value="Macan(NEW)"
+                          >
+                    Macan(NEW)
+                  </option>
+                                  <option value="911 Spirit 70"
+                          >
+                    911 Spirit 70
+                  </option>
+                                  <option value="911 GT3(NEW)"
+                          >
+                    911 GT3(NEW)
+                  </option>
+                                  <option value="Cayman"
+                          >
+                    Cayman
+                  </option>
+                                  <option value="Boxster"
+                          >
+                    Boxster
+                  </option>
+                                  <option value="911 Carrera 4(NEW)"
+                          >
+                    911 Carrera 4(NEW)
+                  </option>
+                                  <option value="911 Targa(NEW)"
+                          >
+                    911 Targa(NEW)
+                  </option>
+                                  <option value="911 Carrera(NEW)"
+                          >
+                    911 Carrera(NEW)
+                  </option>
+                                  <option value="Taycan Cross Turismo(NEW)"
+                          >
+                    Taycan Cross Turismo(NEW)
+                  </option>
+                                  <option value="Taycan(NEW)"
+                          >
+                    Taycan(NEW)
+                  </option>
+                                  <option value="Panamera(NEW)"
+                          >
+                    Panamera(NEW)
+                  </option>
+                                  <option value="Panamera Sport Turismo"
+                          >
+                    Panamera Sport Turismo
+                  </option>
+                                  <option value="911 Dakar"
+                          >
+                    911 Dakar
+                  </option>
+                                  <option value="911 ST"
+                          >
+                    911 ST
+                  </option>
+                                  <option value="911 Sport Classic"
+                          >
+                    911 Sport Classic
+                  </option>
+                                  <option value="911 GT2"
+                          >
+                    911 GT2
+                  </option>
+                                  <option value="Boxster(NEW)"
+                          >
+                    Boxster(NEW)
+                  </option>
+                                  <option value="911 Turbo(NEW)"
+                          >
+                    911 Turbo(NEW)
+                  </option>
+                                  <option value="911 Carrera GTS"
+                          >
+                    911 Carrera GTS
+                  </option>
+                                  <option value="911 Targa 4"
+                          >
+                    911 Targa 4
+                  </option>
+                                  <option value="其他"
+                          >
+                    其他
+                  </option>
+                                          </select>
+          </li>
+        </ul>
+        <button type="submit"
+          class="gabtn" data-ga="['右欄_快速搜尋', '右欄_快速搜尋_找中古車', '快速搜尋_找中古車_放大鏡']"
+          >
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="hot-spot-video">
+        <h3 class="right-tite"><span>焦點影音</span></h3>
+
+                                <a class="gabtn" href="https://autos.yahoo.com.tw/video/%E4%B8%98%E6%B6%B5%E8%87%AA%E7%88%86%E8%9F%91%E8%9E%82%E8%BA%B2%E5%8C%85%E5%8C%85%E5%90%8C%E5%B1%85-%E9%80%B1-%E5%A6%82%E4%BB%8A%E6%84%9B%E8%BB%8A%E7%AB%9F%E5%A4%A7%E8%AE%8A%E8%BA%AB-072100227.html" title="丘涵自爆蟑螂躲包包同居一週？如今愛車竟大變身？" data-ga="['右欄_焦點影音', '右欄_焦點影音1', 'N/A']">
+                <div class="player-container">
+                    
+                    <img src="https://cf-images.us-east-1.prod.boltdns.net/v1/jit/6415665815001/1d054348-18b3-49d8-8c60-380328abee33/main/1280x720/52s558ms/match/image.jpg" alt="丘涵自爆蟑螂躲包包同居一週？如今愛車竟大變身？">
+                </div>
+                <h4>丘涵自爆蟑螂躲包包同居一週？如今愛車竟大變身？</h4>
+            </a>
+                                <a class="gabtn" href="https://autos.yahoo.com.tw/video/%E3%80%90%E8%B8%A2%E9%A4%A8%E5%8E%9F%E5%BB%A0%E6%B2%B9%E8%80%97%EF%BC%81%E3%80%91hyundai-kona-hybrid-150%E5%85%AC%E9%87%8C%E6%AE%98%E9%85%B7%E5%AF%A6%E6%B8%AC%EF%BC%8C%E6%BB%BF%E6%BB%BF%E9%BB%91%E7%A7%91%E6%8A%80%E5%8D%BB%E5%B0%91%E4%BA%86%E9%80%99%E4%B8%80%E6%A8%A3%EF%BC%9F%E6%9C%89%E6%9C%AC%E4%BA%8B%E6%8C%91%E6%88%B0%E7%A5%9E%E8%BB%8A%E5%97%8E%EF%BC%9Fhyundai-kona-hybrid-%E4%B8%BB%E6%89%93%E7%AF%80%E8%83%BD%E7%9C%81%E6%B2%B9%EF%BC%8C%E7%A9%B6%E7%AB%9F%E5%AF%A6%E9%9A%9B%E6%B2%B9%E8%80%97%E8%83%BD%E4%B8%8D%E8%83%BD%E6%8C%91%E6%88%B0%E5%8E%9F%E5%BB%A0%E6%95%B8%E6%93%9A%EF%BC%8C%E7%94%9A%E8%87%B3%E6%92%BC%E5%8B%95%E5%90%8C%E7%B4%9A%E7%9C%81%E6%B2%B9%E7%A5%9E%E8%BB%8A%E7%9A%84%E5%9C%B0%E4%BD%8D%EF%BC%9F%E9%80%99%E6%AC%A1%E5%86%A0%E5%84%80%E8%A9%A6%E8%BB%8A%E7%89%B9%E5%88%A5%E5%AE%89%E6%8E%92-150-%E5%85%AC%E9%87%8C%E9%81%93%E8%B7%AF%E5%AF%A6%E6%B8%AC%EF%BC%8C%E5%BE%9E%E5%B8%82%E5%8D%80%E5%88%B0%E9%AB%98%E9%80%9F%E5%85%AC%E8%B7%AF%EF%BC%8C%E5%AE%8C%E6%95%B4%E6%AA%A2%E9%A9%97%E6%B2%B9%E8%80%97%E8%A1%A8%E7%8F%BE%E3%80%82%E9%99%A4%E4%BA%86%E8%B1%90%E5%AF%8C%E7%9A%84%E7%A7%91%E6%8A%80%E9%85%8D%E5%82%99%E8%88%87%E6%B2%B9%E9%9B%BB%E7%B3%BB%E7%B5%B1%EF%BC%8Ckona-hybrid-%E5%8F%88%E6%9C%89%E5%93%AA%E4%BA%9B%E5%84%AA%E7%BC%BA%E9%BB%9E%EF%BC%9F%E6%BB%BF%E6%BB%BF%E9%BB%91%E7%A7%91%E6%8A%80%E4%B9%8B%E4%B8%AD%EF%BC%8C%E6%98%AF%E5%90%A6%E4%B9%9F%E8%97%8F%E8%91%97%E8%AE%93%E4%BA%BA%E9%81%BA%E6%86%BE%E7%9A%84%E7%BC%BA%E6%86%BE%EF%BC%9F%E4%B8%80%E8%B5%B7%E4%BE%86%E7%9C%8B%E7%9C%8B%E9%80%99%E5%A0%B4%E6%AE%98%E9%85%B7%E5%AF%A6%E6%B8%AC%EF%BC%81-074532938.html" title="【踢館原廠油耗！】Hyundai Kona Hybrid 150公里殘酷實測，滿滿黑科技卻少了這一樣？有本事挑戰神車嗎？" data-ga="['右欄_焦點影音', '右欄_焦點影音2', 'N/A']">
+                <div class="player-container">
+                    
+                    <img src="https://d29szjachogqwa.cloudfront.net/images/user-uploaded/321_0094.jpg" alt="【踢館原廠油耗！】Hyundai Kona Hybrid 150公里殘酷實測，滿滿黑科技卻少了這一樣？有本事挑戰神車嗎？">
+                </div>
+                <h4>【踢館原廠油耗！】Hyundai Kona Hybrid 150公里殘酷實測，滿滿黑科技卻少了這一樣？有本事挑戰神車嗎？</h4>
+            </a>
+                                <a class="gabtn" href="https://autos.yahoo.com.tw/video/%E4%B8%98%E6%B6%B5%E8%B6%85%E6%9C%83%E7%8E%A9%E8%BF%B7%E4%BD%A0%E6%89%AD%E6%89%AD%E8%BB%8A-%E7%A6%BE%E7%BE%BD%E5%BF%83%E6%85%8B%E9%83%BD%E5%B4%A9%E4%BA%86%E3%80%90yahoo%E8%BB%8A%E7%9A%84%E8%A9%A6%E7%85%89%E3%80%91-173114000.html" title="丘涵超會玩迷你扭扭車 禾羽心態都崩了【Yahoo車的試煉】" data-ga="['右欄_焦點影音', '右欄_焦點影音3', 'N/A']">
+                <div class="player-container">
+                    
+                    <img src="https://cf-images.us-east-1.prod.boltdns.net/v1/jit/6415665815001/b6dc6098-ffca-427d-add7-f10d2987e8f3/main/1280x720/6s176ms/match/image.jpg" alt="丘涵超會玩迷你扭扭車 禾羽心態都崩了【Yahoo車的試煉】">
+                </div>
+                <h4>丘涵超會玩迷你扭扭車 禾羽心態都崩了【Yahoo車的試煉】</h4>
+            </a>
+        
+        <div class="read-more">
+            <a class="gabtn" href="https://autos.yahoo.com.tw/videos" title="看更多" data-ga="['右欄_焦點影音', '右欄_焦點影音_more', 'N/A']">more</a>
+        </div>
+    </div>
+  <!-- /latest check -->
+  <div class="ranking-right">
+                <h3 class="right-tite"><span>熱門車排行/ 敞蓬車</span></h3>
+                                <a class="gabtn" href="https://autos.yahoo.com.tw/new-cars/model/mazda-mx-5-2026" title="2026 - Mazda MX-5" data-ga="['右欄_熱門排行_汽車','右欄_熱門_汽車_敞蓬車','右欄_熱門_汽車_敞蓬車_1']">
+                <div class="ranking-wrapper">
+                    <span class="counter">1</span>
+                    <img src="https://autos.yahoo.com.tw//p/r/w300/car-models/March2026/ZiWKSHCQyCmWmLycGLlr.jpeg" alt="2026 - Mazda MX-5">
+                    <div class="info">
+                        <span class="">140 - 159</span>
+                        <span>2026 - Mazda MX-5</span>
+                    </div>
+                </div>
+            </a>
+                                <a class="gabtn" href="https://autos.yahoo.com.tw/new-cars/model/porsche-boxster-2025" title="2025 - Porsche Boxster" data-ga="['右欄_熱門排行_汽車','右欄_熱門_汽車_敞蓬車','右欄_熱門_汽車_敞蓬車_2']">
+                <div class="ranking-wrapper">
+                    <span class="counter">2</span>
+                    <img src="https://autos.yahoo.com.tw//p/r/w300/car-models/August2024/k1UqQqF98J4C7wHjZBic.jpeg" alt="2025 - Porsche Boxster">
+                    <div class="info">
+                        <span class="">352 - 794</span>
+                        <span>2025 - Porsche Boxster</span>
+                    </div>
+                </div>
+            </a>
+                                <a class="gabtn" href="https://autos.yahoo.com.tw/new-cars/model/m-benz-maybach-sl-2026" title="2026 - M-Benz Maybach SL" data-ga="['右欄_熱門排行_汽車','右欄_熱門_汽車_敞蓬車','右欄_熱門_汽車_敞蓬車_3']">
+                <div class="ranking-wrapper">
+                    <span class="counter">3</span>
+                    <img src="https://autos.yahoo.com.tw//p/r/w300/car-models/October2025/WkiaI5AMAHr7mz62S1dB.jpg" alt="2026 - M-Benz Maybach SL">
+                    <div class="info">
+                        <span class="">1,196 - 1,196</span>
+                        <span>2026 - M-Benz Maybach SL</span>
+                    </div>
+                </div>
+            </a>
+                                <a class="gabtn" href="https://autos.yahoo.com.tw/new-cars/model/m-benz-cle-cabriolet-2026" title="2026 - M-Benz CLE Cabriolet" data-ga="['右欄_熱門排行_汽車','右欄_熱門_汽車_敞蓬車','右欄_熱門_汽車_敞蓬車_4']">
+                <div class="ranking-wrapper">
+                    <span class="counter">4</span>
+                    <img src="https://autos.yahoo.com.tw//p/r/w300/car-models/March2026/wJjM8y9tf7OVRqZhHv4T.jpeg" alt="2026 - M-Benz CLE Cabriolet">
+                    <div class="info">
+                        <span class="">322 - 481</span>
+                        <span>2026 - M-Benz CLE Cabriolet</span>
+                    </div>
+                </div>
+            </a>
+                                <a class="gabtn" href="https://autos.yahoo.com.tw/new-cars/model/mini-cabrio-2027" title="2027 - Mini Cabrio" data-ga="['右欄_熱門排行_汽車','右欄_熱門_汽車_敞蓬車','右欄_熱門_汽車_敞蓬車_5']">
+                <div class="ranking-wrapper">
+                    <span class="counter">5</span>
+                    <img src="https://autos.yahoo.com.tw//p/r/w300/car-models/September2026/9DypHDX1gWnHiwJtQZsM.jpeg" alt="2027 - Mini Cabrio">
+                    <div class="info">
+                        <span class="">210 - 235</span>
+                        <span>2027 - Mini Cabrio</span>
+                    </div>
+                </div>
+            </a>
+        
+        <div class="read-more">
+            <a class="gabtn" href="https://autos.yahoo.com.tw/popular-cars" title="看更多" data-ga="['右欄_熱門排行_汽車','右欄_熱門_汽車_敞蓬車','右欄_熱門_汽車_敞蓬車_more']">more</a>
+        </div>
+    </div>
+      <div class="fb-box fb-position-fixed">
+	<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FYahooAutosTaiwan%2F&tabs=timeline&width=300&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=1436005369851063" width="300" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</div>
+  <div class="ad-LREC3-300x250">
+	<div id="boxLREC3" class="yom-ad LREC3">
+	  
+	  
+	    
+	  
+	  <div id="tgtLREC3" class="adpos">
+		<div class="ad-placeholder">廣告</div>
+	  </div>
+
+	</div>
+</div>
+                <ul class="footer-url">
+	<li>
+		<a class="gabtn" href="https://tw.help.yahoo.com/kb/autos-tw" title="服務中心" target="_blank" data-ga="['Footer', 'Footer_服務中心', 'N/A']">服務中心</a>
+	</li>
+	<li>|</li>
+	<li>
+		<a class="gabtn" href="https://autos.yahoo.com.tw/sitemap" title="網站地圖" data-ga="['Footer', 'Footer_網站地圖', 'N/A']">網站地圖</a>
+	</li>
+	<li>|</li>
+	<li>
+		<a class="gabtn" href="https://policies.yahoo.com/tw/zh-hant/yahoo/privacy/index.htm" title="隱私權" title="_blank" data-ga="['Footer', 'Footer_隱私權', 'N/A']">隱私權(更新)</a>
+	</li>
+	<li>|</li>
+	<li>
+		<a class="gabtn" href="https://policies.yahoo.com/tw/zh-hant/yahoo/terms/utos/index.htm" title="服務條款" target="_blank" data-ga="['Footer', 'Footer_服務條款', 'N/A']">服務條款(更新)</a>
+	</li>
+	<li>|</li>
+	<li>
+		<a class="gabtn" href="https://marketing.tw.campaign.yahoo.net/emarketing/searchmarketing/" title="關鍵字廣告" target="_blank" data-ga="['Footer', 'Footer_關鍵字廣告', 'N/A']">關鍵字廣告</a>
+	</li>
+	<li>|</li>
+	<li>
+		<a href="https://guce.yahoo.com/privacy-dashboard?locale=zh-Hant-TW" title="隱私權儀表板" target="_blank">隱私權儀表板</a>
+	</li>
+	</ul>
+            </div>
+        </div>
+
+    </div>
+
+            <footer  class="disabled" >
+	<div class="compare-basket mouseleave ga-parent">
+		<input type="hidden" name="now-compare-type" value="">
+<ul>
+                      <li class="last"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+            
+  <span class="now-select">目前選擇<font>0</font>輛</span>
+  <li>
+    <span class="now-select">目前選擇<font>0</font>輛</span>
+    <button  class="disabled"  data-href="https://autos.yahoo.com.tw/cars/submit-compare">開始比較
+    </button>
+  </li>
+</ul>
+	</div>
+	<form method="post" action="https://autos.yahoo.com.tw/ajax/clear_compare_list">
+		<input type="hidden" name="_token" value="Agibgebi2Y6DtpfYMxTL86oi8sYZ7zkZfBuCgv3N" autocomplete="off">
+		<input type="hidden" name="view_type" value="1">
+		<div class="cancel-compare" data-href="https://autos.yahoo.com.tw/ajax/clear_compare_list">
+			<span>取消比較</span>
+		</div>
+	</form>
+</footer>    
+    
+    <script src="/js/library.js?id=32c840002a1242ca60d2a603f4f4f180"></script>
+
+      <script src="/js/make_n_trim.js?id=c312fe589817edca50e94ba9fd308a16"></script>
+ </body>
+    <script>
+    (function () {
+                    const position_tgtLREC = {
+                id: 'tgtLREC',
+                kvs: {
+                    loc: 'top_right',
+                },
+                path: '/22888152279/tw/yauto/ros/dt/tw_yauto_ros_dt_top_right',
+                region: 'index',
+                                    size: [[300, 250], [300, 600]],
+                            };
+
+                        const position_tgtLREC3 = {
+                id: 'tgtLREC3',
+                kvs: {
+                    loc: 'mid_right',
+                },
+                path: '/22888152279/tw/yauto/ros/dt/tw_yauto_ros_dt_mid_right',
+                region: 'index',
+                                    size: [[300, 250], [300, 600]],
+                            };
+            
+            const position_tgtLDRB = {
+                id: 'tgtLDRB',
+                kvs: {
+                    loc: 'top_center',
+                },
+                path: '/22888152279/tw/yauto/ros/dt/tw_yauto_ros_dt_top_center',
+                region: 'index',
+                                    size: [[728, 90],[970, 250],[3,1]],
+                    customSizeConfig: {
+                        Horizon: true,
+                    },
+                            };
+        
+                const position_tgtMAST = {};
+        
+        const position_tgtLDRB2 = {  
+            id: "tgtLDRB2",  
+            kvs: {
+                loc: 'btm_center',
+            },
+            path: '/22888152279/tw/yauto/ros/dt/tw_yauto_ros_dt_btm_center',
+            region: 'index',
+            size: [[728, 90]],
+        };
+        const configs = {
+            tgtMAST: position_tgtMAST,
+            tgtLREC: position_tgtLREC,
+            tgtLREC3: position_tgtLREC3,
+            tgtLDRB: position_tgtLDRB,
+            tgtLDRB2: position_tgtLDRB2,
+        }
+        window.configs = configs;
+
+        const taboolaSetting = {
+            publisherId: 'yahootwhk-network',
+            pageType: 'category',
+        }
+
+        const benjiConfig = {
+            feature: {
+                enableEdgeToEdge: true,
+                enableYahooPrebid: true,
+                enableRefreshDebounce: true,
+                enableTaboolaDebounce: true,
+                enableLazyFetch: true,
+            },
+            setting: {
+                taboolaSetting: taboolaSetting,
+                                lazyLoad: {
+                    lazyFetch: {
+                        taboola: {
+                            offset: 300,
+                        }
+                    }
+                },
+                                refresh: {
+                    duration: 30,
+                    limit: 100,
+                    requireUserAction: true,
+                    sameSizeRefresh: true,
+                    tabFocus: {
+                        outOfFocusDuration: 3,
+                    },
+                },
+            },
+
+
+            positions: {},
+
+            i13n: {
+                site: 'autos',
+                region: 'TW',
+                lang: 'zh-Hant-TW',
+                ga_measurement_id: 'G-R03XFJ4HBB',
+                spaceid: '794027974',
+                bucket: [],
+                device:  'desktop' ,
+                usercountry: 'US',
+            }
+        };
+
+        const pt = "utility";
+        const pct = "";
+        if(pt) benjiConfig.i13n.pt = pt;
+        if(pct) benjiConfig.i13n.pct = pct;
+
+        const adsElements = document.querySelectorAll(".adpos");
+        adsElements.forEach((e)=> {
+            const id = e.id;
+            benjiConfig['positions'][id] = configs[id];
+        })
+
+                    const hashtag = 'new-cars';
+            benjiConfig['i13n']['hashtag'] = hashtag.split(",");
+                // console.log('benji?', benjiConfig);
+
+        //Native Ads START
+        const nadsElements = document.querySelectorAll(".nadpos");
+        let nadPositions = {};
+        nadsElements.forEach(function(e) {
+            let config = JSON.parse(e.getAttribute('data-nad-benji-config'));
+            let configId = e.getAttribute('data-nad-benji-id');
+            if (config && configId) {
+                nadPositions[configId] = config;
+            }
+        });
+
+        if (benjiConfig && nadPositions) {
+            Object.assign(benjiConfig.positions, nadPositions);
+        }
+        //Native Ads END
+
+        if (typeof window.benji !== 'undefined') {
+            window.benji.start(benjiConfig);
+        } else {
+            window.benji = {
+                config: benjiConfig
+            };
+        }
+        // 監聽廣告
+        const adSlot = document.querySelector('.adpos');
+        
+        // 檢查元素是否存在
+        if (adSlot) {
+            const observer = new MutationObserver(() => {
+                const iframe = adSlot.querySelector('iframe');
+                if (iframe) {
+                    // 嘗試監聽 iframe load
+                    const placeholder = adSlot.querySelector('.ad-placeholder');
+                    try {
+                        iframe.addEventListener('load', () => {
+                            if (placeholder) {
+                                placeholder.style.display = 'none';
+                            }
+                        });
+                    } catch (e) {
+                        // 無法監聽時 fallback
+                        if (placeholder) {
+                            placeholder.style.display = 'none';
+                        }
+                    }
+                    observer.disconnect(); // 停止監聽
+                }
+            });
+
+            observer.observe(adSlot, { childList: true, subtree: true });
+        }
+
+    })();
+</script>
+ 
+
+ </html>
