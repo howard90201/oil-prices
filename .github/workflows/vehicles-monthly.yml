@@ -37,8 +37,8 @@ jobs:
         run: |
           git config user.name "vehicle-bot"
           git config user.email "vehicle-bot@users.noreply.github.com"
-          git add vehicles/pending vehicles/data/yahoo_seen.txt vehicles/data/gov_state.json
-          git diff --cached --quiet || { git commit -m "車型資料每月檢查 $(TZ=Asia/Taipei date +%F)"; git push; }
+          git add -A vehicles/pending vehicles/data
+          git diff --cached --quiet || { git commit -m "車型資料每月檢查 $(TZ=Asia/Taipei date +%F)"; git pull --rebase -q; git push; }
       - name: 開 issue 通知
         if: steps.gate.outputs.go == '1'
         env:
