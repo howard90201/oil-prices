@@ -1,0 +1,55 @@
+name: 車型資料每月檢查
+
+on:
+  schedule:
+    # 每月 1 日 03:17（台北時間）= 前一天 19:17 UTC。避開整點、也錯開油價更新。
+    - cron: '17 19 28-31 * *'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: '這次最多讀幾個新車款頁'
+        default: '600'
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: 只在每月最後一天（台北隔天 1 日）執行
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u -d tomorrow +%d)" = "01" ]; then echo "go=1" >> $GITHUB_OUTPUT; fi
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.go == '1'
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.go == '1'
+        with:
+          python-version: '3.12'
+      - name: 檢查新車款
+        if: steps.gate.outputs.go == '1'
+        run: python3 vehicles/scripts/monthly.py "${{ github.event.inputs.limit || '600' }}"
+      - name: 儲存待確認清單
+        if: steps.gate.outputs.go == '1'
+        run: |
+          git config user.name "vehicle-bot"
+          git config user.email "vehicle-bot@users.noreply.github.com"
+          git add vehicles/pending vehicles/data/yahoo_seen.txt vehicles/data/gov_state.json
+          git diff --cached --quiet || { git commit -m "車型資料每月檢查 $(TZ=Asia/Taipei date +%F)"; git push; }
+      - name: 開 issue 通知
+        if: steps.gate.outputs.go == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          D=$(python3 -c "import json;print(json.load(open('vehicles/pending/latest.json'))['date'])")
+          N=$(python3 -c "import json;d=json.load(open('vehicles/pending/latest.json'));print(sum(v for k,v in d['counts'].items() if k!='略過'))")
+          gh label create "車型更新" --color 0E8A16 2>/dev/null || true
+          gh label create "同意套用" --color 1D76DB 2>/dev/null || true
+          if [ "$N" != "0" ]; then
+            gh issue create --title "車型資料待確認 $D（$N 筆）" --label "車型更新" --body-file "vehicles/pending/$D.md"
+          else
+            echo "這個月沒有新車款"
+          fi
