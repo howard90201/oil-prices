@@ -17,7 +17,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 80
     steps:
       - name: 只在每月最後一天（台北隔天 1 日）執行
         id: gate

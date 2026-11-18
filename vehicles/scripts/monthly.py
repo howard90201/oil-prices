@@ -5,22 +5,25 @@
 輸出：vehicles/pending/<日期>.csv、vehicles/pending/<日期>.md、vehicles/pending/latest.json（給 Actions 開 issue 用）
 """
 import csv, json, os, re, sys, time, datetime, urllib.request, gzip
+from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import common as C
 
 UA = {'User-Agent': 'Mozilla/5.0 (compatible; chezhangben-vehicle-check/1.0; +https://github.com/howard90201/oil-prices)',
       'Accept-Language': 'zh-TW,zh;q=0.9', 'Accept-Encoding': 'gzip'}
 LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else 600
+BUDGET = 45 * 60            # 讀車款頁最多 45 分鐘，沒讀完的下個月接著讀
+T0 = time.time()
 TZ = datetime.timezone(datetime.timedelta(hours=8))
 today = datetime.datetime.now(TZ).date()
 PEND = os.path.join(C.DATA, '..', 'pending')
 os.makedirs(PEND, exist_ok=True)
 log = []
 
-def get(url, tries=3):
+def get(url, tries=2):
     for i in range(tries):
         try:
-            r = urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40)
+            r = urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=20)
             b = r.read()
             if r.headers.get('Content-Encoding') == 'gzip': b = gzip.decompress(b)
             return b.decode('utf-8', 'ignore')
@@ -33,22 +36,24 @@ def sitemap_trims():
     idx = get('https://autos.yahoo.com.tw/sitemap.xml')
     maps = [u for u in re.findall(r'<loc>([^<]+)</loc>', idx) if re.search(r'sitemap_(car|bike)_trims_\d+\.xml', u)]
     out = {}
-    for u in maps:
+    def one(u):
         try:
-            x = get(u)
+            return get(u)
         except Exception as e:
-            log.append(f'網站地圖讀取失敗：{u}（{e}）'); continue
-        for blk in re.findall(r'<url>(.*?)</url>', x, re.S):
-            loc = re.search(r'<loc>([^<]+)</loc>', blk)
-            lm = re.search(r'<lastmod>([^<]+)</lastmod>', blk)
-            if loc and '/trim/' in loc.group(1):
-                out[C.norm_path(loc.group(1))] = lm.group(1)[:10] if lm else ''
-        time.sleep(0.5)
+            log.append(f'網站地圖讀取失敗：{u}（{e}）'); return ''
+    with ThreadPoolExecutor(4) as ex:
+        for x in ex.map(one, maps):
+            for blk in re.findall(r'<url>(.*?)</url>', x, re.S):
+                loc = re.search(r'<loc>([^<]+)</loc>', blk)
+                lm = re.search(r'<lastmod>([^<]+)</lastmod>', blk)
+                if loc and '/trim/' in loc.group(1):
+                    out[C.norm_path(loc.group(1))] = lm.group(1)[:10] if lm else ''
     return out, len(maps)
 
 rows, cols = C.read_master()
 seen = C.read_seen()
 trims, nmaps = sitemap_trims()
+T_MAP = round(time.time() - T0)
 new = [p for p in trims if p not in seen]
 def year_of(p):
     m = C.split_path(p); return int(m.group(3)) if m else 0
@@ -62,34 +67,44 @@ for r in rows:
 models = {(r['vehicle_type'], r['brand'], r['model_family'].upper()) for r in rows}
 brands = {(r['vehicle_type'], r['brand']) for r in rows}
 pending, failed = [], []
-for i, p in enumerate(todo):
+def fetch(p):
     try:
-        h = get('https://autos.yahoo.com.tw' + p + '/spec')
-    except Exception as e:
-        failed.append(p); continue
-    title, spec = C.parse_spec_page(h)
-    r, issues = C.page_to_row(p, title, spec)
-    seen.add(p)
-    if not r:
-        pending.append(dict(action='略過', note='；'.join(issues), yahoo_url='https://autos.yahoo.com.tw' + p)); continue
-    k = (r['vehicle_type'], r['brand'], r['model_family'].upper(), r['trim'].upper())
-    y = int(r['year_from'])
-    same = by_key.get(k, [])
-    if any(int(x['year_from']) <= y <= int(x['year_to']) for x in same):
-        continue                                   # 這個年份已經有了（Yahoo 重新上架同一頁）
-    prev = next((x for x in same if int(x['year_to']) == y - 1 and all(x[c] == r[c] for c in C.SPEC_KEYS)), None)
-    if prev:
-        action = '延長年份'; issues.insert(0, f"把 {prev['year_from']}–{prev['year_to']} 那筆延長到 {y}")
-    elif same:
-        action = '新增'; issues.insert(0, '同車款新年份或規格不同')
-    elif (r['vehicle_type'], r['brand'], r['model_family'].upper()) in models:
-        action = '新增'; issues.insert(0, '既有車型的新車款')
-    elif (r['vehicle_type'], r['brand']) in brands:
-        action = '新增'; issues.insert(0, '新車型，名稱要確認')
-    else:
-        action = '新增'; issues.insert(0, '新品牌')
-    pending.append(dict(action=action, note='；'.join(issues), **r))
-    time.sleep(0.8)
+        return p, get('https://autos.yahoo.com.tw' + p + '/spec')
+    except Exception:
+        return p, None
+T1 = time.time(); done_n = 0
+with ThreadPoolExecutor(4) as ex:
+    for k0 in range(0, len(todo), 40):
+        if time.time() - T0 > BUDGET:
+            later = todo[k0:] + later; todo = todo[:k0]; log.append('時間到，剩下的下個月再讀'); break
+        for p, h in ex.map(fetch, todo[k0:k0 + 40]):
+            done_n += 1
+            if h is None:
+                failed.append(p); continue
+            title, spec = C.parse_spec_page(h)
+            r, issues = C.page_to_row(p, title, spec)
+            seen.add(p)
+            if not r:
+                pending.append(dict(action='略過', note='；'.join(issues), yahoo_url='https://autos.yahoo.com.tw' + p)); continue
+            k = (r['vehicle_type'], r['brand'], r['model_family'].upper(), r['trim'].upper())
+            y = int(r['year_from'])
+            same = by_key.get(k, [])
+            if any(int(x['year_from']) <= y <= int(x['year_to']) for x in same):
+                continue                                   # 這個年份已經有了（Yahoo 重新上架同一頁）
+            prev = next((x for x in same if int(x['year_to']) == y - 1 and all(x[c] == r[c] for c in C.SPEC_KEYS)), None)
+            if prev:
+                action = '延長年份'; issues.insert(0, f"把 {prev['year_from']}–{prev['year_to']} 那筆延長到 {y}")
+            elif same:
+                action = '新增'; issues.insert(0, '同車款新年份或規格不同')
+            elif (r['vehicle_type'], r['brand'], r['model_family'].upper()) in models:
+                action = '新增'; issues.insert(0, '既有車型的新車款')
+            elif (r['vehicle_type'], r['brand']) in brands:
+                action = '新增'; issues.insert(0, '新車型，名稱要確認')
+            else:
+                action = '新增'; issues.insert(0, '新品牌')
+            pending.append(dict(action=action, note='；'.join(issues), **r))
+        time.sleep(2)
+T_PAGES = round(time.time() - T1)
 
 # 3. 政府新審驗車型（只列出來對照，不自動加進主檔）
 gov = []
@@ -153,6 +168,6 @@ if log:
     md += ['## 連線問題', ''] + ['- ' + x for x in log] + ['']
 md += ['完整清單：`vehicles/pending/' + stamp + '.csv`。確認後在這個 issue 加上「同意套用」標籤，或回覆 Claude，就會套用到主檔和車帳本的車款資料。']
 open(os.path.join(PEND, f'{stamp}.md'), 'w', encoding='utf-8').write('\n'.join(md) + '\n')
-json.dump(dict(date=stamp, counts=cnt, flagged=len(flag), gov=len(gov), later=len(later), failed=len(failed), log=log),
+json.dump(dict(date=stamp, sitemap_trims=len(trims), new_total=len(new), read=done_n, t_sitemap=T_MAP, t_pages=T_PAGES, counts=cnt, flagged=len(flag), gov=len(gov), later=len(later), failed=len(failed), log=log),
           open(os.path.join(PEND, 'latest.json'), 'w', encoding='utf-8'), ensure_ascii=False)
 print('\n'.join(md))
