@@ -1340,7 +1340,7 @@ const SYNC={
   paint(){const el=document.getElementById('acct-st');if(el)el.textContent=this.statusText()},
   html(){
     if(!this.sb)return null;
-    if(!this.user)return `<div><div class="group"><button type="button" class="cell" id="acct-login">${ic('blue','user')}<div class="main"><span class="t">登入或註冊</span><span class="s">用 Email 收登入信，不用記密碼</span></div>${chev}</button></div>
+    if(!this.user)return `<div><div class="group"><button type="button" class="cell" id="acct-login">${ic('blue','user')}<div class="main"><span class="t">登入或註冊</span><span class="s">用 Email 收驗證碼，不用記密碼</span></div>${chev}</button></div>
       <p class="foot">登入後紀錄會同步到雲端，換手機、換電腦都看得到。沒登入也能用，資料只存在這台裝置。</p></div>`;
     const lim=this.limit?`<p class="foot">免費方案最多 ${this.limit} 台車，超過的車只存在這台裝置，沒有上傳。</p>`:'';
     const lo=S.sync&&Object.keys(S.sync.localOnly||{}).filter(id=>S.cars.some(c=>c.id===id)).length;
@@ -1361,7 +1361,7 @@ const SYNC={
     let email='';
     const step1=()=>open(head('登入或註冊','lf','取消','下一步')+`<form id="lf" class="settings" novalidate>
       <div><p class="ghead">Email</p><div class="group"><label class="cell frow">${ic('blue','user')}<input id="lf-mail" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" aria-label="Email" style="text-align:left" value="${esc(email)}"></label></div>
-      <p class="err below" id="lf-err"></p><p class="foot">我們會寄一封登入信到這個信箱。第一次使用會自動建立帳號。</p></div></form>`,sc=>{
+      <p class="err below" id="lf-err"></p><p class="foot">我們會寄一組驗證碼到這個信箱。第一次使用會自動建立帳號。</p></div></form>`,sc=>{
       const f=sc.querySelector('#lf'),inp=sc.querySelector('#lf-mail'),er=sc.querySelector('#lf-err');setTimeout(()=>inp.focus(),50);
       f.addEventListener('submit',async e=>{e.preventDefault();email=inp.value.trim();
         if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){er.textContent='請填正確的 Email。';return}
@@ -1370,9 +1370,9 @@ const SYNC={
         if(error){er.textContent=/rate|seconds/i.test(error.message)?'寄太多次了，請稍等一下再試。':'寄送失敗：'+error.message;return}
         step2()});
     });
-    const step2=()=>open(head('收信登入','lc','返回','登入')+`<form id="lc" class="settings" novalidate>
+    const step2=()=>open(head('輸入驗證碼','lc','返回','登入')+`<form id="lc" class="settings" novalidate>
       <div><p class="ghead">驗證碼</p><div class="group"><label class="cell frow">${ic('blue','shield')}<input id="lc-code" inputmode="numeric" autocomplete="one-time-code" maxlength="10" placeholder="信裡的數字" aria-label="驗證碼" style="text-align:left;letter-spacing:.2em"></label></div>
-      <p class="err below" id="lc-err"></p><p class="foot">已寄到 ${esc(email)}。請打開信裡的「Sign in」連結，就會回到車帳本並登入；信裡如果有數字驗證碼，也可以填在上面。沒收到請看垃圾郵件匣。</p></div></form>`,sc=>{
+      <p class="err below" id="lc-err"></p><p class="foot">已寄到 ${esc(email)}。請輸入信裡的 6 位數驗證碼；也可以直接點信裡的「登入車帳本」連結。沒收到請看垃圾郵件匣。</p></div></form>`,sc=>{
       const f=sc.querySelector('#lc'),inp=sc.querySelector('#lc-code'),er=sc.querySelector('#lc-err');setTimeout(()=>inp.focus(),50);
       sc.querySelector('[data-close]').addEventListener('click',()=>setTimeout(step1,0));
       f.addEventListener('submit',async e=>{e.preventDefault();const token=inp.value.replace(/\D/g,'');
