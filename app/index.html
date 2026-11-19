@@ -2842,29 +2842,35 @@ function zipStore(files){
 const xesc=v=>String(v).replace(/[&<>"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch])).replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g,'');
 const colL=n=>{let s='';while(n>0){const m=(n-1)%26;s=String.fromCharCode(65+m)+s;n=Math.floor((n-1)/26)}return s};
 function makeXlsx(){
-  const sheets=[],fonts=['<font><sz val="11"/><name val="Calibri"/><family val="2"/></font>'],fills=['<fill><patternFill patternType="none"/></fill>','<fill><patternFill patternType="gray125"/></fill>'];
+  const sheets=[],fonts=['<font><sz val="11"/><name val="Microsoft JhengHei"/><family val="2"/><charset val="136"/></font>'],fills=['<fill><patternFill patternType="none"/></fill>','<fill><patternFill patternType="gray125"/></fill>'];
   const borders=['<border><left/><right/><top/><bottom/><diagonal/></border>','<border><left style="thin"><color rgb="FFBFBFBF"/></left><right style="thin"><color rgb="FFBFBFBF"/></right><top style="thin"><color rgb="FFBFBFBF"/></top><bottom style="thin"><color rgb="FFBFBFBF"/></bottom><diagonal/></border>'];
+  const ln=(side,style,col)=>`<${side} style="${style}"><color rgb="FF${col}"/></${side}>`;
+  const BD={row:`<border><left/><right/><top/>${ln('bottom','thin','E3E5EA')}<diagonal/></border>`,
+    hd:`<border><left/>${ln('right','thin','2F86E6')}<top/><bottom/><diagonal/></border>`,
+    tot:`<border><left/><right/>${ln('top','medium','0069DB')}${ln('bottom','thin','C9DCF5')}<diagonal/></border>`,
+    box:`<border>${ln('left','thin','E3E5EA')}${ln('right','thin','E3E5EA')}${ln('top','thin','E3E5EA')}${ln('bottom','thin','E3E5EA')}<diagonal/></border>`};
   const numFmts=[],xfs=['<xf numFmtId="0" fontId="0" fillId="0" borderId="0" xfId="0"/>'],cache={};
   const idx=(a,x)=>{let i=a.indexOf(x);if(i<0){a.push(x);i=a.length-1}return i};
   function style(st){
     if(!st)return 0;const k=JSON.stringify(st);if(cache[k]!=null)return cache[k];
-    const fontId=idx(fonts,`<font>${st.b?'<b/>':''}<sz val="${st.sz||11}"/>${st.color?`<color rgb="FF${st.color}"/>`:''}<name val="Calibri"/><family val="2"/></font>`);
+    const fontId=idx(fonts,`<font>${st.b?'<b/>':''}<sz val="${st.sz||11}"/>${st.color?`<color rgb="FF${st.color}"/>`:''}<name val="Microsoft JhengHei"/><family val="2"/><charset val="136"/></font>`);
     const fillId=st.fill?idx(fills,`<fill><patternFill patternType="solid"><fgColor rgb="FF${st.fill}"/><bgColor indexed="64"/></patternFill></fill>`):0;
-    const borderId=st.border?1:0,numFmtId=st.fmt?164+idx(numFmts,st.fmt):0;
+    const borderId=st.bd?idx(borders,BD[st.bd]):st.border?1:0,numFmtId=st.fmt?164+idx(numFmts,st.fmt):0;
     const al=(st.h||st.v||st.wrap)?`<alignment${st.h?` horizontal="${st.h}"`:''}${st.v?` vertical="${st.v}"`:''}${st.wrap?' wrapText="1"':''}/>`:'';
     xfs.push(`<xf numFmtId="${numFmtId}" fontId="${fontId}" fillId="${fillId}" borderId="${borderId}" xfId="0" applyNumberFormat="1" applyFont="1" applyFill="1" applyBorder="1"${al?` applyAlignment="1">${al}</xf>`:'/>'}`);
     return cache[k]=xfs.length-1;
   }
   function sheet(name){
-    const ws={name,rows:{},merges:[],cols:{},freeze:0,
-      set(r,c,v,st){(this.rows[r]=this.rows[r]||{})[c]={v,s:style(st)};return this},
+    const ws={name,rows:{},merges:[],cols:{},heights:{},freeze:0,tab:'',filter:'',printRows:'',grid:false,
+      set(r,c,v,st){(this.rows[r]=this.rows[r]||{})[c]={v,st};return this},
+      height(r,h){this.heights[r]=h;return this},
       merge(ref){this.merges.push(ref);return this},width(c,w){this.cols[c]=w;return this}};
     sheets.push(ws);return ws;
   }
   const serial=d=>{const [y,m,dd]=d.split('-').map(Number);return (Date.UTC(y,m-1,dd)-Date.UTC(1899,11,30))/864e5};
   function cellXML(r,c,cell){
-    const ref=colL(c)+r,v=cell.v,s=cell.s?` s="${cell.s}"`:'';
-    if(v==null||v==='')return cell.s?`<c r="${ref}"${s}/>`:'';
+    const sid=style(cell.st),ref=colL(c)+r,v=cell.v,s=sid?` s="${sid}"`:'';
+    if(v==null||v==='')return sid?`<c r="${ref}"${s}/>`:'';
     if(typeof v==='object'&&v.f!=null){const f=`<f>${xesc(v.f.replace(/^=/,''))}</f>`,x=v.v;
       if(x===undefined)return `<c r="${ref}"${s}>${f}</c>`;
       if(typeof x==='number')return isFinite(x)?`<c r="${ref}"${s}>${f}<v>${x}</v></c>`:`<c r="${ref}"${s} t="e">${f}<v>#DIV/0!</v></c>`;
@@ -2876,16 +2882,16 @@ function makeXlsx(){
     return `<c r="${ref}"${s} t="inlineStr"><is><t xml:space="preserve">${xesc(v)}</t></is></c>`;
   }
   function sheetXML(ws,first){
-    const rows=Object.keys(ws.rows).map(Number).sort((a,b)=>a-b).map(r=>{const cs=ws.rows[r];return `<row r="${r}">${Object.keys(cs).map(Number).sort((a,b)=>a-b).map(c=>cellXML(r,c,cs[c])).join('')}</row>`}).join('');
+    const rows=Object.keys(ws.rows).map(Number).sort((a,b)=>a-b).map(r=>{const cs=ws.rows[r];return `<row r="${r}"${ws.heights[r]?` ht="${ws.heights[r]}" customHeight="1"`:''}>${Object.keys(cs).map(Number).sort((a,b)=>a-b).map(c=>cellXML(r,c,cs[c])).join('')}</row>`}).join('');
     const cols=Object.keys(ws.cols).map(Number).sort((a,b)=>a-b).map(c=>`<col min="${c}" max="${c}" width="${ws.cols[c]}" customWidth="1"/>`).join('');
     const pane=ws.freeze?`<pane ySplit="${ws.freeze}" topLeftCell="A${ws.freeze+1}" activePane="bottomLeft" state="frozen"/><selection pane="bottomLeft"/>`:'';
-    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheetViews><sheetView workbookViewId="0"${first?' tabSelected="1"':''}>${pane}</sheetView></sheetViews><sheetFormatPr defaultRowHeight="16"/>${cols?`<cols>${cols}</cols>`:''}<sheetData>${rows}</sheetData>${ws.merges.length?`<mergeCells count="${ws.merges.length}">${ws.merges.map(m=>`<mergeCell ref="${m}"/>`).join('')}</mergeCells>`:''}</worksheet>`;
+    return `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheetPr>${ws.tab?`<tabColor rgb="FF${ws.tab}"/>`:''}<pageSetUpPr fitToPage="1"/></sheetPr><sheetViews><sheetView${ws.grid?'':' showGridLines="0"'} workbookViewId="0"${first?' tabSelected="1"':''}>${pane}</sheetView></sheetViews><sheetFormatPr defaultRowHeight="18"/>${cols?`<cols>${cols}</cols>`:''}<sheetData>${rows}</sheetData>${ws.filter?`<autoFilter ref="${ws.filter}"/>`:''}${ws.merges.length?`<mergeCells count="${ws.merges.length}">${ws.merges.map(m=>`<mergeCell ref="${m}"/>`).join('')}</mergeCells>`:''}<pageMargins left="0.4" right="0.4" top="0.5" bottom="0.5" header="0.3" footer="0.3"/><pageSetup paperSize="9" orientation="landscape" fitToWidth="1" fitToHeight="0"/></worksheet>`;
   }
   function build(){
     const n=sheets.length;
     const ws=sheets.map((w,i)=>({name:`xl/worksheets/sheet${i+1}.xml`,data:sheetXML(w,i===0)}));
     const styles=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<styleSheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">${numFmts.length?`<numFmts count="${numFmts.length}">${numFmts.map((f,i)=>`<numFmt numFmtId="${164+i}" formatCode="${xesc(f)}"/>`).join('')}</numFmts>`:''}<fonts count="${fonts.length}">${fonts.join('')}</fonts><fills count="${fills.length}">${fills.join('')}</fills><borders count="${borders.length}">${borders.join('')}</borders><cellStyleXfs count="1"><xf numFmtId="0" fontId="0" fillId="0" borderId="0"/></cellStyleXfs><cellXfs count="${xfs.length}">${xfs.join('')}</cellXfs><cellStyles count="1"><cellStyle name="Normal" xfId="0" builtinId="0"/></cellStyles></styleSheet>`;
-    const wb=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><bookViews><workbookView activeTab="0"/></bookViews><sheets>${sheets.map((w,i)=>`<sheet name="${xesc(w.name)}" sheetId="${i+1}" r:id="rId${i+1}"${w.hidden?' state="hidden"':''}/>`).join('')}</sheets><calcPr calcId="191029" fullCalcOnLoad="1"/></workbook>`;
+    const wb=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><bookViews><workbookView activeTab="0"/></bookViews><sheets>${sheets.map((w,i)=>`<sheet name="${xesc(w.name)}" sheetId="${i+1}" r:id="rId${i+1}"${w.hidden?' state="hidden"':''}/>`).join('')}</sheets>${(()=>{const dn=[];sheets.forEach((w,i)=>{const q=`'${w.name.replace(/'/g,"''")}'`;if(w.filter){const [a,b]=w.filter.split(':');const abs=x=>x.replace(/([A-Z]+)(\d+)/,'$$$1$$$2');dn.push(`<definedName name="_xlnm._FilterDatabase" localSheetId="${i}" hidden="1">${xesc(q+'!'+abs(a)+':'+abs(b))}</definedName>`)}if(w.printRows){const [a,b]=w.printRows.split(':');dn.push(`<definedName name="_xlnm.Print_Titles" localSheetId="${i}">${xesc(q+'!$'+a+':$'+b)}</definedName>`)}});return dn.length?`<definedNames>${dn.join('')}</definedNames>`:''})()}<calcPr calcId="191029" fullCalcOnLoad="1"/></workbook>`;
     const wbRels=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">${sheets.map((w,i)=>`<Relationship Id="rId${i+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet${i+1}.xml"/>`).join('')}<Relationship Id="rId${n+1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`;
     const rels=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="xl/workbook.xml"/></Relationships>`;
     const ct=`<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/>${sheets.map((w,i)=>`<Override PartName="/xl/worksheets/sheet${i+1}.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/>`).join('')}<Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/></Types>`;
@@ -2897,10 +2903,14 @@ function makeXlsx(){
 /* ---------- export in the layout of the user's own car spreadsheet ---------- */
 const FUEL_LONG={'98':'98無鉛汽油','95':'95無鉛汽油','92':'92無鉛汽油','diesel':'高級柴油'};
 function buildWorkbook(c){
-  const X=makeXlsx(),B={border:1};
-  const H={b:true,color:'FFFFFF',fill:'0070C0',h:'center',v:'center',wrap:true,border:1};
-  const H2={b:true,fill:'DDEBF7',h:'center',v:'center',border:1};
-  const st={date:{fmt:'yyyy/m/d',h:'center',border:1},money:{fmt:'"$"#,##0',border:1},price:{fmt:'"$"#,##0.0',border:1},d3:{fmt:'0.000',border:1},d2:{fmt:'0.00',border:1},int:{fmt:'#,##0',border:1},c:{h:'center',border:1},wrap:{wrap:true,v:'top',border:1}};
+  /* 樣式：見「車帳本 Excel 匯出設計」。藍色表頭、隔列淡灰、只畫列底細線、合計列淡藍 */
+  const X=makeXlsx(),ACC='0069DB',ZEB='F5F7FA',B={bd:'row'};
+  const H={b:true,color:'FFFFFF',fill:ACC,h:'center',v:'center',wrap:true,bd:'hd'},H2=H;
+  const st={date:{fmt:'yyyy/mm/dd',h:'center',bd:'row'},money:{fmt:'#,##0',bd:'row'},price:{fmt:'0.0',bd:'row'},d3:{fmt:'0.000',bd:'row'},d2:{fmt:'0.00',bd:'row'},int:{fmt:'#,##0',bd:'row'},c:{h:'center',bd:'row'},wrap:{wrap:true,v:'top',bd:'row'}};
+  const TOT={b:true,fill:'E6F0FC',bd:'tot',fmt:'#,##0'},SUBT={sz:10,color:'6C6C70'};
+  const FUELC={'98':'1F7D37','95':'8A6A00','92':'8E3FB0','diesel':'0A5FBF'},GRADEC={'優':'1F7D37','普通':'A85800','差':'D70015'};
+  /* 隔列淡灰：r0..r1 列、c1..c2 欄，空格也補上底線 */
+  const zebra=(ws,r0,r1,c1,c2)=>{for(let r=r0;r<=r1;r++){const row=ws.rows[r]=ws.rows[r]||{};for(let c=c1;c<=c2;c++){const cell=row[c]||(row[c]={v:'',st:B});const t={...(cell.st||{}),bd:(cell.st&&cell.st.bd)||'row'};delete t.border;if((r-r0)%2&&!t.fill)t.fill=ZEB;cell.st=t}}};
   const label=`${carModel(c)}${c.plate?' '+c.plate:''}`;
   const now=today(),thisYear=now.getFullYear();
   const exp=c.exp||[],sumExp=(cat,y,m)=>exp.filter(e=>e.cat===cat&&+e.date.slice(0,4)===y&&(m==null||+e.date.slice(5,7)===m)).reduce((s,e)=>s+(+e.amount||0),0);
@@ -2908,10 +2918,12 @@ function buildWorkbook(c){
   const y0=yrs.length?Math.min(...yrs,thisYear):thisYear;const years=[];for(let y=y0;y<=thisYear;y++)years.push(y);
 
   const wsSum=X.sheet('總覽'),wsFuel=X.sheet('油耗統計'),wsM=X.sheet('保養&改裝統計'),wsT=X.sheet('Etag通行費'),wsI=X.sheet('保險'),wsF=X.sheet('規費'),wsO=X.sheet('其他費用');
+  wsSum.tab='1C1C1E';wsFuel.tab='FF9500';wsM.tab='007AFF';wsT.tab='30B0C7';wsI.tab=wsF.tab=wsO.tab='5856D6';
+  const subtitle=`${c.plate||carModel(c)}・金額單位：元`;
 
   /* 油耗統計: the same row-by-row formulas as the reference sheet, each with its computed result */
   const fh=['序號','年度','日期','加油站','燃油品項','單價','加油金額','折扣','顯示總里程','是否加滿','行駛天數','行駛里程','加油量','油耗','油耗等級','每公里價格','累積金額','累積油量','累積里程','上次滿油里程','是否加滿'];
-  fh.forEach((h,i)=>wsFuel.set(1,i+1,h,H));wsFuel.freeze=1;
+  fh.forEach((h,i)=>wsFuel.set(1,i+1,h,H));wsFuel.freeze=1;wsFuel.height(1,30);
   [6.1,7.1,11,18,13,10.8,12.9,10.2,13,9,10,10,11,10,9.5,11,12,11,11,13.8,9.5].forEach((w,i)=>wsFuel.width(i+1,w));
   const fl=[...c.fuel].sort((a,b)=>a.odo-b.odo||a.date.localeCompare(b.date));
   const sc=c.type==='scooter',g1=sc?45:14,g2=sc?35:12;
@@ -2962,9 +2974,12 @@ function buildWorkbook(c){
       i?fx(`IF(J${r}<>"P","未加滿",IF(T${q}="","",I${r}-T${q}))`,o.S):fx(`IF(J${r}<>"P","未加滿","")`,o.S),
       i?fx(`IF(U${r}=TRUE,I${r},T${q})`,o.T):fx(`IF(U${r}=TRUE,I${r},"")`,o.T),
       o.U];
-    const fm=[st.c,st.c,st.date,B,B,st.price,st.money,st.money,st.int,st.c,st.c,st.int,st.d3,st.d3,st.c,st.d3,st.money,st.d3,st.int,st.int,st.c];
+    const fc=FUELC[f.fuelType],tag=fc?{b:true,color:'FFFFFF',fill:fc,h:'center',bd:'row'}:B;
+    const gc=GRADEC[o.O],grd=gc?{b:true,color:gc,h:'center',bd:'row'}:st.c;
+    const fm=[st.c,st.c,st.date,B,tag,st.price,st.money,st.money,st.int,st.c,st.c,st.int,st.d3,st.d2,grd,st.d2,st.money,st.d3,st.int,st.int,st.c];
     vals.forEach((v,j)=>wsFuel.set(r,j+1,v,fm[j]));
   });
+  if(fl.length){zebra(wsFuel,2,fl.length+1,1,21);wsFuel.filter=`A1:U${fl.length+1}`}wsFuel.printRows='1:1';
   const kmplList=F.map(o=>o.N).filter(x=>typeof x==='number');
   const realFuel=fl.filter(f=>!f.syn);
   const fuelLast=Math.max(2,fl.length+1);
@@ -2974,42 +2989,49 @@ function buildWorkbook(c){
   const cols=itemsFor(c).filter(it=>it.id!=='insurance'&&mrows.some(m=>(m.items||[]).includes(it.id)));
   const mh=['序號','建議里程','建議週期','保養總里程','年度','日期','服務廠',...cols.map(i=>i.name),'工資','其他','合計','備註'];
   const firstItem=8,laborCol=firstItem+cols.length,otherCol=laborCol+1,totCol=otherCol+1,noteCol=totCol+1;
-  mh.forEach((h,i)=>wsM.set(1,i+1,h,H));wsM.freeze=1;
+  mh.forEach((h,i)=>wsM.set(1,i+1,h,H));wsM.freeze=1;wsM.height(1,32);
   [6.1,10.6,10,13.1,6.8,11,13.6].forEach((w,i)=>wsM.width(i+1,w));cols.forEach((_,i)=>wsM.width(firstItem+i,Math.max(8.4,_.name.length*2.2+1.5)));
   wsM.width(laborCol,8.4).width(otherCol,8.4).width(totCol,12).width(noteCol,24);
   const maintY={};
   mrows.forEach((m,i)=>{
     const r=i+2,parts=m.parts||{};let pSum=0;
     [i,'','',toMeter(c,m.date,m.odo),+m.date.slice(0,4),{d:m.date},m.shop||''].forEach((v,j)=>wsM.set(r,j+1,v,[st.c,st.int,st.c,st.int,st.c,st.date,B][j]));
-    cols.forEach((it,j)=>{if(!(m.items||[]).includes(it.id)){wsM.set(r,firstItem+j,'',B);return}const a=+(parts[it.id]?.amount)||0;pSum+=a;wsM.set(r,firstItem+j,a,st.money)});
+    cols.forEach((it,j)=>{if(!(m.items||[]).includes(it.id)){wsM.set(r,firstItem+j,'',B);return}const a=+(parts[it.id]?.amount)||0;pSum+=a;wsM.set(r,firstItem+j,a,{fmt:'#,##0;-#,##0;[Color10]"✓"',bd:'row'})});
     const insAmt=(m.items||[]).includes('insurance')?(+(parts.insurance?.amount)||0):0;
     const lb=+m.labor||0,other=(+m.cost||0)-pSum-lb-insAmt;
     wsM.set(r,laborCol,lb||'',st.money).set(r,otherCol,other>0?other:'',st.money);
     const rowTot=pSum+lb+(other>0?other:0);maintY[+m.date.slice(0,4)]=(maintY[+m.date.slice(0,4)]||0)+rowTot;
-    wsM.set(r,totCol,{f:`IF(SUM(${colL(firstItem)}${r}:${colL(otherCol)}${r})=0,"",SUM(${colL(firstItem)}${r}:${colL(otherCol)}${r}))`,v:rowTot||''},st.money);
+    wsM.set(r,totCol,{f:`IF(SUM(${colL(firstItem)}${r}:${colL(otherCol)}${r})=0,"",SUM(${colL(firstItem)}${r}:${colL(otherCol)}${r}))`,v:rowTot||''},{...st.money,b:true});
     const note=[m.title,m.custom?`其他項目：${m.custom}`:'',...(m.items||[]).filter(k=>parts[k]?.spec).map(k=>`${itemOf(c,k)?.name||''}：${parts[k].spec}`),m.note,m.pay?`付款：${m.pay}`:''].filter(Boolean).join('\n');
     wsM.set(r,noteCol,note,st.wrap);
   });
+  if(mrows.length){zebra(wsM,2,mrows.length+1,1,noteCol);wsM.filter=`A1:${colL(noteCol)}${mrows.length+1}`}wsM.printRows='1:1';
 
   /* Etag通行費 / 保險 / 規費 */
-  const titled=(ws,title,head,lastCol,sz)=>{ws.set(1,1,title,{b:true,sz,h:'center'}).merge(`A1:${colL(lastCol)}1`);head.forEach((h,i)=>ws.set(2,i+1,h,H2))};
+  const titled=(ws,title,head)=>{ws.set(1,1,title,{b:true,sz:20,v:'bottom'}).height(1,32);ws.set(2,1,subtitle,SUBT);head.forEach((h,i)=>ws.set(3,i+1,h,H));ws.height(3,26);ws.freeze=3;ws.printRows='1:3'};
   const MON=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
   titled(wsT,'Etag通行費',['年度',...MON,'總計'],14,20);wsT.width(1,7.8);for(let i=2;i<=13;i++)wsT.width(i,10);wsT.width(14,12.4);
-  years.forEach((y,i)=>{const r=i+3;wsT.set(r,1,y,st.c);for(let m=1;m<=12;m++){const v=sumExp('toll',y,m);wsT.set(r,m+1,v||'',st.money)}const tt=sumExp('toll',y);wsT.set(r,14,{f:`IF(SUM(B${r}:M${r}),SUM(B${r}:M${r}),"")`,v:tt||''},st.money)});
+  years.forEach((y,i)=>{const r=i+4;wsT.set(r,1,y,st.c);for(let m=1;m<=12;m++){const v=sumExp('toll',y,m);wsT.set(r,m+1,v||'',st.money)}const tt=sumExp('toll',y);wsT.set(r,14,{f:`IF(SUM(B${r}:M${r}),SUM(B${r}:M${r}),"")`,v:tt||''},st.money)});
+  zebra(wsT,4,years.length+3,1,14);
   titled(wsI,'保險',['年度','投保單位','強制險','任意險','總計'],5,15);[8.8,15.8,12,12,12].forEach((w,i)=>wsI.width(i+1,w));
   const insY={};
-  years.forEach((y,i)=>{const r=i+3;
+  years.forEach((y,i)=>{const r=i+4;
     const legacy=c.maint.filter(m=>(m.items||[]).includes('insurance')&&+m.date.slice(0,4)===y);
     const legacyAmt=legacy.reduce((s,m)=>s+((m.items||[]).length===1?(+m.cost||0):(+(m.parts?.insurance?.amount)||0)),0);
     const who=[...new Set([...exp.filter(e=>(e.cat==='ins_c'||e.cat==='ins_o')&&+e.date.slice(0,4)===y).map(e=>e.note),...legacy.map(m=>m.shop)].filter(Boolean))].join('、');
     wsI.set(r,1,y,st.c).set(r,2,who,B).set(r,3,sumExp('ins_c',y)||'',st.money).set(r,4,(sumExp('ins_o',y)+legacyAmt)||'',st.money).set(r,5,{f:`IF(C${r}+D${r}=0,"",C${r}+D${r})`,v:(insY[y]=sumExp('ins_c',y)+sumExp('ins_o',y)+legacyAmt)||''},st.money)});
+  zebra(wsI,4,years.length+3,1,5);
   titled(wsF,'規費',['年度','使用牌照稅','燃料費'],3,15);[8.8,15.8,12].forEach((w,i)=>wsF.width(i+1,w));
-  years.forEach((y,i)=>{const r=i+3;wsF.set(r,1,y,st.c).set(r,2,sumExp('lictax',y)||'',st.money).set(r,3,sumExp('fueltax',y)||'',st.money)});
+  years.forEach((y,i)=>{const r=i+4;wsF.set(r,1,y,st.c).set(r,2,sumExp('lictax',y)||'',st.money).set(r,3,sumExp('fueltax',y)||'',st.money)});
+
+  zebra(wsF,4,years.length+3,1,3);
 
   /* 其他費用 (not part of the reference layout: parking, washing, fines…) */
   const shown=['toll','ins_c','ins_o','lictax','fueltax'];
-  ['年度','日期','類別','金額','備註'].forEach((h,i)=>wsO.set(1,i+1,h,H));wsO.freeze=1;[7,11,12,11,28].forEach((w,i)=>wsO.width(i+1,w));
-  exp.filter(e=>!shown.includes(e.cat)).sort((a,b)=>a.date.localeCompare(b.date)).forEach((e,i)=>{const r=i+2;wsO.set(r,1,+e.date.slice(0,4),st.c).set(r,2,{d:e.date},st.date).set(r,3,(E[e.cat]||E.other).name,st.c).set(r,4,+e.amount||0,st.money).set(r,5,e.note||'',B)});
+  titled(wsO,'其他費用',['年度','日期','類別','金額','備註']);[8.8,12,12,12,30].forEach((w,i)=>wsO.width(i+1,w));
+  const othersO=exp.filter(e=>!shown.includes(e.cat)).sort((a,b)=>a.date.localeCompare(b.date));
+  othersO.forEach((e,i)=>{const r=i+4;wsO.set(r,1,+e.date.slice(0,4),st.c).set(r,2,{d:e.date},st.date).set(r,3,(E[e.cat]||E.other).name,st.c).set(r,4,+e.amount||0,st.money).set(r,5,e.note||'',B)});
+  if(othersO.length){zebra(wsO,4,othersO.length+3,1,5);wsO.filter=`A3:E${othersO.length+3}`}
 
   /* 總覽: same layout as the reference, plus an 其他費用 column counted in 年度合計; every formula carries its result */
   const otherY={};exp.filter(e=>!shown.includes(e.cat)).forEach(e=>{const y=+e.date.slice(0,4);otherY[y]=(otherY[y]||0)+(+e.amount||0)});
@@ -3018,19 +3040,19 @@ function buildWorkbook(c){
   let age='',days='';
   if(dv){let y=now.getFullYear()-dv.getFullYear(),m=now.getMonth()-dv.getMonth(),d=now.getDate()-dv.getDate();if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}if(m<0){y--;m+=12}age=`${y} 年 ${m} 月 ${d} 日`;days=Math.round((now-dv)/864e5)+1}
   [10.8,12.9,12,12,12,13.1,13.6,12,15.4,17.9,12.9,11.6,12.9,12,9.1,13.1,11.1,11.6].forEach((w,i)=>wsSum.width(i+1,w));
-  wsSum.set(1,1,label,{b:true,sz:22}).merge('A1:R1');
-  wsSum.set(2,3,'原發照日',{h:'right'}).set(2,4,c.deliveryDate?{d:c.deliveryDate}:'',{fmt:'yyyy/m/d',h:'center'}).merge('D2:E2');
-  wsSum.set(2,6,'起始里程',{h:'right'}).set(2,7,+c.startOdo||0,{fmt:'#,##0'}).set(2,8,'公里');
-  wsSum.set(2,9,'車齡',{h:'right'}).set(2,10,{f:'IF(D2="","",DATEDIF(D2,TODAY(),"Y")&" 年 "&DATEDIF(D2,TODAY(),"YM")&" 月 "&DATEDIF(D2,TODAY(),"MD")&" 日")',v:age},{h:'center'}).merge('J2:K2');
+  wsSum.set(1,1,label,{b:true,sz:20,v:'bottom'}).merge('A1:R1');wsSum.height(1,34);
+  wsSum.set(2,3,'原發照日',{h:'right',color:'6C6C70'}).set(2,4,c.deliveryDate?{d:c.deliveryDate}:'',{fmt:'yyyy/m/d',h:'center'}).merge('D2:E2');
+  wsSum.set(2,6,'起始里程',{h:'right',color:'6C6C70'}).set(2,7,+c.startOdo||0,{fmt:'#,##0'}).set(2,8,'公里',{color:'6C6C70'});
+  wsSum.set(2,9,'車齡',{h:'right',color:'6C6C70'}).set(2,10,{f:'IF(D2="","",DATEDIF(D2,TODAY(),"Y")&" 年 "&DATEDIF(D2,TODAY(),"YM")&" 月 "&DATEDIF(D2,TODAY(),"MD")&" 日")',v:age},{h:'center'}).merge('J2:K2');
   wsSum.set(2,12,{f:'IF(D2="","",TODAY()-D2+1)',v:days},{fmt:'#,##0" 天"',h:'center'});
-  wsSum.set(2,13,'總里程',{h:'right'}).set(2,14,toMeter(c,iso(now),currentOdo(c)),{fmt:'#,##0'}).set(2,15,'公里').set(2,16,{f:'TODAY()',v:ser(iso(now))},{fmt:'yyyy/m/d',h:'center'});
+  wsSum.set(2,13,'總里程',{h:'right',color:'6C6C70'}).set(2,14,toMeter(c,iso(now),currentOdo(c)),{fmt:'#,##0'}).set(2,15,'公里',{color:'6C6C70'}).set(2,16,{f:'TODAY()',v:ser(iso(now))},{fmt:'yyyy/m/d',h:'center'});
   const yLast=5+years.length;
   const yearRow=y=>{const fuelY=F.filter(o=>o.Y===y).reduce((s,o)=>s+o.G,0);const v=[sumExp('lictax',y),sumExp('fueltax',y),insY[y]||0,fuelY,sumExp('toll',y),maintY[y]||0,otherY[y]||0];return [...v,v.reduce((a,b)=>a+b,0)]};
   const grand=years.reduce((s,y)=>s+yearRow(y)[7],0);
-  wsSum.set(4,1,'花費總表',{b:true,sz:14,h:'center',fill:'DDEBF7'}).merge('A4:G4');
+  wsSum.set(4,1,'花費總表',{b:true,sz:14,color:ACC,fill:'E6F0FC',h:'center',v:'center'}).merge('A4:G4');wsSum.height(4,28);
   wsSum.set(4,8,{f:`"總計：  $"&TEXT(SUM(I6:I${yLast}),"#,##0")&"元"`,v:`總計：  $${Math.round(grand).toLocaleString('en-US')}元`},{b:true,sz:12,h:'center'}).merge('H4:I4');
-  wsSum.set(4,10,'油耗總表',{b:true,sz:14,h:'center',fill:'DDEBF7'}).merge('J4:R4');
-  ['年度','牌照稅','燃料費','保險','油費','Etag通行費','保養&改裝','其他費用','年度合計'].forEach((h,i)=>wsSum.set(5,i+1,h,H2));
+  wsSum.set(4,10,'油耗總表',{b:true,sz:14,color:ACC,fill:'E6F0FC',h:'center',v:'center'}).merge('J4:R4');
+  ['年度','牌照稅','燃料費','保險','油費','Etag通行費','保養&改裝','其他費用','年度合計'].forEach((h,i)=>wsSum.set(5,i+1,h,H2));wsSum.height(5,26);
   const M="'保養&改裝統計'",tc=colL(totCol);
   years.forEach((y,i)=>{const r=6+i,v=yearRow(y);
     wsSum.set(r,1,y,st.c)
@@ -3043,6 +3065,8 @@ function buildWorkbook(c){
       .set(r,8,{f:`SUMIFS('其他費用'!$D:$D,'其他費用'!$A:$A,$A${r})`,v:v[6]},st.money)
       .set(r,9,{f:`SUM(B${r}:H${r})`,v:v[7]},{...st.money,b:true});
   });
+  zebra(wsSum,6,yLast,1,9);
+  {const r=yLast+1;wsSum.set(r,1,'合計',{...TOT,h:'center'});for(let k=2;k<=9;k++){const L=colL(k);wsSum.set(r,k,{f:`SUM(${L}6:${L}${yLast})`,v:years.reduce((s,y)=>s+yearRow(y)[k-2],0)},TOT)}wsSum.height(r,22)}
   const num=x=>typeof x==='number';
   const K5=F.filter(o=>num(o.L)).reduce((s,o)=>s+o.L,0),N5=F.filter(o=>num(o.K)).reduce((s,o)=>s+o.K,0),K6=r3(F.reduce((s,o)=>s+(+o.M||0),0)-(F[0]?(+F[0].M||0):0)),K7=F.reduce((s,o)=>s+o.G,0)-(F[0]?F[0].G:0);
   const top10=[...kmplList].sort((a,b)=>b-a).slice(0,10),K9=kmplList.length?Math.max(...kmplList):0,K11=+c.tank||'';
@@ -3056,7 +3080,7 @@ function buildWorkbook(c){
     [11,'油箱總量',K11,'公升'],
     [13,'總日均成本',{f:`IFERROR(ROUND(SUM(I6:I${yLast})/L2,2),"")`,v:div(grand,days,2)},'元/天']
   ];
-  for(const [r,...v] of right)v.forEach((x,j)=>wsSum.set(r,10+j,x,j%3===0?{b:true,h:'right',fill:'F2F2F2',border:1}:j%3===1?{fmt:'#,##0.###',h:'center',border:1}:{border:1,color:'595959'}));
+  for(const [r,...v] of right)v.forEach((x,j)=>wsSum.set(r,10+j,x,j%3===0?{b:true,h:'right',fill:ZEB,color:'3A3A3C',bd:'box'}:j%3===1?{fmt:'#,##0.###',h:'center',bd:'box'}:{bd:'box',color:'6C6C70'}));
 
   /* hidden sheet: what the visible sheets cannot hold, so importing restores the car exactly */
   const wsD=X.sheet('車帳本資料');wsD.hidden=true;
@@ -3128,6 +3152,8 @@ async function readWorkbook(file){
 }
 const serialToIso=v=>{if(typeof v==='string'){const m=v.match(/(\d{4})[\/-](\d{1,2})[\/-](\d{1,2})/);return m?`${m[1]}-${m[2].padStart(2,'0')}-${m[3].padStart(2,'0')}`:''}if(typeof v!=='number'||!isFinite(v))return '';const d=new Date(Date.UTC(1899,11,30)+Math.round(v)*864e5);return d.toISOString().slice(0,10)};
 const numv=v=>typeof v==='number'?v:(typeof v==='string'&&v.trim()!==''&&!isNaN(+v.replace(/[,$\s]/g,''))?+v.replace(/[,$\s]/g,''):null);
+/* 表頭在第幾列：找第 1–6 列裡有 key 的那一列（舊版匯出在第 2 列，新版有說明列在第 3 列） */
+function headRow(rows,key,def){for(let r=1;r<=6;r++)if(Object.values(rows[r]||{}).some(v=>typeof v==='string'&&v.trim()===key))return r;return def}
 function headerMap(rows,r=1){const m={};for(const [c,v] of Object.entries(rows[r]||{}))if(typeof v==='string'&&!(v in m))m[v.trim()]=+c;return m}
 const ITEM_ALIAS={'節流閥':'節流閥清洗','變速箱濾網':'變速箱濾芯','機油濾芯':'機油芯','進氣濾網':'空氣濾網','水箱水':'水箱精','剎車油':'煞車油','來令片':'煞車皮','冷氣濾芯':'冷氣濾網','煞車來令片':'煞車皮'};
 const FUEL_KEY=n=>{n=String(n||'');return /98/.test(n)?'98':/95/.test(n)?'95':/92/.test(n)?'92':/柴油/.test(n)?'diesel':''};
@@ -3193,11 +3219,11 @@ function workbookToCar(sh){
   };
   const last=(y,m)=>{const d=new Date(y,m,0),t=today();return iso(d>t?t:d)};
   const tS=sh['Etag通行費'];
-  if(tS){const h=headerMap(tS,2);const MON=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
-    for(const r of Object.keys(tS).map(Number).filter(r=>r>2)){const y=numv(tS[r][h['年度']||1]);if(!y)continue;MON.forEach((mn,i)=>{const v=numv(tS[r][h[mn]]);if(v)bucket('toll',y,i+1,v,last(y,i+1),'ETag')})}}
+  if(tS){const hr=headRow(tS,'年度',2),h=headerMap(tS,hr);const MON=['一月','二月','三月','四月','五月','六月','七月','八月','九月','十月','十一月','十二月'];
+    for(const r of Object.keys(tS).map(Number).filter(r=>r>hr)){const y=numv(tS[r][h['年度']||1]);if(!y)continue;MON.forEach((mn,i)=>{const v=numv(tS[r][h[mn]]);if(v)bucket('toll',y,i+1,v,last(y,i+1),'ETag')})}}
   const iS=sh['保險'];
-  if(iS){const h=headerMap(iS,2);
-    for(const r of Object.keys(iS).map(Number).filter(r=>r>2)){const row=iS[r],y=numv(row[h['年度']||1]);if(!y)continue;const who=String(row[h['投保單位']]||'');
+  if(iS){const hr=headRow(iS,'年度',2),h=headerMap(iS,hr);
+    for(const r of Object.keys(iS).map(Number).filter(r=>r>hr)){const row=iS[r],y=numv(row[h['年度']||1]);if(!y)continue;const who=String(row[h['投保單位']]||'');
       const cv=numv(row[h['強制險']])||0,ov=numv(row[h['任意險']])||0;
       const insDate=c.deliveryDate?`${y}-${c.deliveryDate.slice(5)}`:`${y}-01-01`;
       bucket('ins_c',y,null,cv,insDate,who);
@@ -3207,8 +3233,8 @@ function workbookToCar(sh){
       else bucket('ins_o',y,null,ov,insDate,who);
     }}
   const fS=sh['規費'];
-  if(fS){const h=headerMap(fS,2);
-    for(const r of Object.keys(fS).map(Number).filter(r=>r>2)){const row=fS[r],y=numv(row[h['年度']||1]);if(!y)continue;
+  if(fS){const hr=headRow(fS,'年度',2),h=headerMap(fS,hr);
+    for(const r of Object.keys(fS).map(Number).filter(r=>r>hr)){const row=fS[r],y=numv(row[h['年度']||1]);if(!y)continue;
       bucket('lictax',y,null,numv(row[h['使用牌照稅']])||0,`${y}-05-31`,'');bucket('fueltax',y,null,numv(row[h['燃料費']])||0,`${y}-07-31`,'')}}
   const pS=sh['品項價格'];
   if(pS){const h=headerMap(pS),done=new Set();
@@ -3224,8 +3250,8 @@ function workbookToCar(sh){
       else{const ex=c.customItems.find(x=>x.name===name);if(ex)Object.assign(ex,iv);else c.customItems.push({id:'cx_'+uid(),name,...iv})}
     }}
   const oS=sh['其他費用'];
-  if(oS){const h=headerMap(oS);const byName=Object.fromEntries(EXP.map(x=>[x.name,x.id]));
-    for(const r of Object.keys(oS).map(Number).filter(r=>r>1)){const row=oS[r],date=serialToIso(row[h['日期']]),amt=numv(row[h['金額']]);if(!date||!amt)continue;
+  if(oS){const hr=headRow(oS,'年度',1),h=headerMap(oS,hr);const byName=Object.fromEntries(EXP.map(x=>[x.name,x.id]));
+    for(const r of Object.keys(oS).map(Number).filter(r=>r>hr)){const row=oS[r],date=serialToIso(row[h['日期']]),amt=numv(row[h['金額']]);if(!date||!amt)continue;
       c.exp.push({id:uid(),date,cat:byName[String(row[h['類別']]||'').trim()]||'other',amount:amt,note:String(row[h['備註']]||''),photos:[]})}}
   if(!c.fuel.length&&!c.maint.length&&!c.exp.length)throw new Error('這個 Excel 裡沒有讀到任何紀錄。');
   return c;
