@@ -225,6 +225,14 @@ create policy "車輛成員改照片" on storage.objects for update to authentic
 create policy "車輛成員刪照片" on storage.objects for delete to authenticated
   using (bucket_id = 'photos' and public.is_member((storage.foldername(name))[1]));
 
+
+-- ========== 7. 開放給登入的使用者（新專案不會自動開放；真正能看到哪些列由上面的權限規則決定） ==========
+grant usage on schema public to authenticated;
+grant select, insert, update, delete on public.profiles, public.vehicles, public.vehicle_members,
+  public.fuel_logs, public.charge_logs, public.maintenance_logs, public.expenses, public.odometer_logs, public.photos
+  to authenticated;
+grant execute on function public.is_member(text), public.is_owner(text) to authenticated;
+
 -- 完成。下面這行應該列出 9 張表：
 select table_name from information_schema.tables
 where table_schema = 'public' and table_name in
