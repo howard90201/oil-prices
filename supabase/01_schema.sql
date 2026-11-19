@@ -185,7 +185,7 @@ drop policy if exists "成員看車" on public.vehicles;
 drop policy if exists "建立自己的車" on public.vehicles;
 drop policy if exists "車主改車" on public.vehicles;
 drop policy if exists "車主刪車" on public.vehicles;
-create policy "成員看車"     on public.vehicles for select to authenticated using (public.is_member(id));
+create policy "成員看車"     on public.vehicles for select to authenticated using (owner_id = auth.uid() or public.is_member(id));
 create policy "建立自己的車" on public.vehicles for insert to authenticated with check (owner_id = auth.uid());
 create policy "車主改車"     on public.vehicles for update to authenticated using (public.is_owner(id)) with check (public.is_owner(id));
 create policy "車主刪車"     on public.vehicles for delete to authenticated using (public.is_owner(id));
