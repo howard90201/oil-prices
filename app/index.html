@@ -2810,7 +2810,16 @@ try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyPr
 function toast(msg){const t=document.createElement('div');t.className='toast';t.setAttribute('role','status');t.textContent=msg;document.body.appendChild(t);setTimeout(()=>t.remove(),2600)}
 async function offerFile(filename,data){
   const dl=await (window.claude?.use?window.claude.use('downloads'):Promise.resolve(null)).catch(()=>null);
-  if(!dl){toast('這個畫面沒辦法下載檔案，請到 claude.ai 開啟車帳本再試。');return false}
+  if(!dl){
+    // 網頁版：用瀏覽器一般的下載，存到「下載」資料夾（手機在「檔案」App 的下載項目）
+    try{
+      const type=/\.json$/i.test(filename)?'application/json':/\.xlsx$/i.test(filename)?'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':'application/octet-stream';
+      const url=URL.createObjectURL(data instanceof Blob?data:new Blob([data],{type}));
+      const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),60000);
+      toast('已下載「'+filename+'」，在「下載」資料夾。');return true;
+    }catch(e){toast('沒辦法下載這個檔案。');return false}
+  }
   try{await dl.save({filename,data});toast('檔案已經交給你的裝置儲存。');return true}
   catch(e){if(e&&e.code==='declined')return false;if(e&&e.code==='rate_limited'){toast('已經有一個下載視窗開著，請先處理它。');return false}toast('沒辦法下載這個檔案，請到 claude.ai 開啟車帳本再試。');return false}
 }
